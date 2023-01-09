@@ -1,0 +1,48 @@
+<div class="tab-pane fade" id="nav-approved" role="tabpanel" aria-labelledby="nav-approved-tab">
+    <div class="pt-3 pb-3">
+        <div class="row">
+            <div class="col-12 text-end"><h5 class="h5-font-color">{{ page_title }} {{ 'text-approval-particulars'|trans|raw }}</h5><hr class="hr-line-color" /></div>
+        </div>
+        <div class="row">
+            <div class="col-6"></div>
+            <div class="col-6">
+                <div class="alert alert-dark shadow-sm ps-2 pb-2 mt-2">
+                    <span class="alert-label">{{ 'label-toggle-approved'|trans|raw }}</span>
+                    <p class="m-0 pe-0 pb-0 ps-1 pt-2">
+                        {% if page_content.isApproved  %}
+                            <span class="badge bg-success text-uppercase">{{ 'text-yes'|trans|raw }}</span>
+                        {% else %}
+                            <span class="badge bg-danger text-uppercase">{{ 'text-no'|trans|raw }}</span>
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="alert alert-dark shadow-sm ps-2 pb-2 mt-2">
+                    <span class="alert-label">{{ 'label-approved-at'|trans|raw }}</span>
+                    <p class="m-0 pe-0 pb-0 ps-1 pt-2">
+                        {% if page_content.approvedAt  %}
+                            {{ page_content.approvedAt|date }}
+                        {% else %}
+                            <span class="text-orange">{{ 'alert-empty-records'|trans|raw }}</span>
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="alert alert-dark shadow-sm ps-2 pb-2 mt-2">
+                    <span class="alert-label">{{ 'label-approved-by'|trans|raw }}</span>
+                    <p class="m-0 pe-0 pb-0 ps-1 pt-2">
+                        {% if page_content.approvedBy  %}
+                            {{ page_content.approvedBy }}
+                        {% else %}
+                            <span class="text-orange">{{ 'alert-empty-records'|trans|raw }}</span>
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

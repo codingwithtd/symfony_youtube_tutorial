@@ -1,0 +1,148 @@
+            <nav class="navbar navbar-expand-md">
+                <div class="container-fluid">
+
+                        <a class="btn btn-sm offcanvas-toggler me-2" data-bs-toggle="offcanvas" href="#offcanvasSidebar" role="button" aria-controls="offcanvasSidebar" title="">
+                            <i class="bx-fw bi bi-menu-button"></i>
+                        </a>
+
+                    <a class="navbar-brand rounded-1" href="{{ url('app_home_dashboard_index')}}" title="{{ 'app-text-site-title'|trans|raw }}"></a>
+                    <a class="btn btn-sm navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="bx-fw bi bi-menu-button"></i>
+                    </a>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+{% if header is defined %}
+{% for item in header %}
+{% if item.dropdown is defined %}
+{% if (is_granted('IS_AUTHENTICATED_FULLY') and (item.section == 'security')) %}
+{% else %}
+                            <li class="{{ item.class }}">
+                                <a class="nav-link" href="#" title="{{ item.label|trans|raw }}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    {{ item.label|trans|raw }}
+                                </a>
+                                <ul class="dropdown-menu shadow mt-2" aria-labelledby="navbarDropdown">
+{% for item in item.dropdown %}
+{% if item.divider is defined %}
+                                    <li class="dropdown-divider"></li>
+{% else %}
+                                    <li class="{{ item.class }}"><a href="{{ url(item.link) }}" title="{{ item.title|trans|raw }}">{{ item.label|trans|raw }}</a></li>
+{% endif %}
+{% endfor %}
+                                </ul>
+                            </li>
+{% endif %}
+{% else %}
+                            <li class="{{ item.class }}"><a class="nav-link" href="{{ url(item.link) }}" title="{{ item.title|trans|raw }}">{{ item.label|trans|raw }}</a></li>
+{% endif %}
+{% endfor %}
+                        </ul>
+                        <div class="d-flex align-items-center pt-1">
+                            <div class="me-2">
+                                <ul class="list-group list-group-horizontal">
+{% for item in social %}
+                                    <li class="{{ item.class }}">
+                                        <a href="#" title="{{ item.label|trans|raw }}">
+                                            <i class="{{ item.fav }}"></i>
+                                        </a>
+                                    </li>
+{% endfor %}
+{% if darkswitch is defined %}
+{% for item in darkswitch %}
+                                    <li class="list-group-item border-0 px-1 d-none d-sm-block bg-transparent">
+                                        <div class="dropdown dark-switch">
+                                            <a href="{{ item.link }}" id="dropdownMenuGrid" title="{{ item.label|trans|raw }}" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="{{ item.fav }}"></i>
+                                            </a>
+                                            <div class="dropdown-menu mt-3 shadow w-auto" aria-labelledby="dropdownMenuGrid">
+                                                <div class="dropdown-item-text small">
+                                                    <h6 class="text-uppercase"><strong>{{ item.label|trans|raw }}</strong></h6>
+                                                    {{ 'app-text-site-theme-meaning'|trans|raw }}
+                                                </div>
+                                                <div class="dropdown-divider"></div>
+                                                <div class="dropdown-item-text small">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox"  id="darkSwitch">
+                                                        <label class="form-check-label text-uppercase" for="darkSwitch">{{ 'app-text-site-theme-switch'|trans|raw }}</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+{% endfor %}
+{% endif %}
+                                    <li class="list-group-item border-0 px-1 d-none d-sm-block bg-transparent">
+                                        <div class="dropdown locale-menu">
+                                            <a href="#" id="dropdownMenuGrid" title="{{ 'app-text-site-language-location'|trans|raw }}" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="bi bi-globe"></i>
+                                            </a>
+                                            <ul class="dropdown-menu mt-3 shadow w-auto" aria-labelledby="dropdownMenuGrid">
+{% for item in locale %}
+                                                <li class="dropdown-item">
+                                                    <a href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({'_locale': item.params})) }}" title="{{ item.label|trans|raw }}">
+                                                        <img src="{{ asset(item.img,'flag') }}" title="{{ item.label|trans|raw }}" class="img-fluid">
+                                                            {{ item.label|trans|raw }}
+                                                    </a>
+                                                </li>
+{% endfor %}
+                                            </ul>
+                                        </div>
+                                    </li>
+{% if is_granted('IS_AUTHENTICATED_FULLY')  %}
+                                    <li class="list-group-item border-0 px-1 pt-2 bg-transparent user-menu">
+                                        <div class="dropdown">
+                                            <a class="" href="#" id="dropdownMenuGrid" data-bs-toggle="dropdown" aria-expanded="false">
+                                                {% if 'ADMINISTRATOR' in app.user.roles|join(', ') %}
+                                                    {% set navbar_avatar = 'navbar-avatar-administrator-user' %}
+                                                    {% set span_security_roll = 'span-avatar-administrator-user' %}
+                                                    {% set user_security_roll = 'filters-roles-administrator-user' %}
+                                                {% elseif 'PRACTITIONER' in app.user.roles|join(', ') %}
+                                                    {% set navbar_avatar = 'navbar-avatar-practitioner-user' %}
+                                                    {% set span_security_roll = 'span-avatar-practitioner-user' %}
+                                                    {% set user_security_roll = 'filters-roles-practitioner-user' %}
+                                                {% elseif 'MODERATOR' in app.user.roles|join(', ') %}
+                                                    {% set navbar_avatar = 'navbar-avatar-moderator-user' %}
+                                                    {% set span_security_roll = 'span-avatar-moderator-user' %}
+                                                    {% set user_security_roll = 'filters-roles-moderator-user' %}
+                                                {% elseif 'VERIFIED' in app.user.roles|join(', ') %}
+                                                    {% set navbar_avatar = 'navbar-avatar-verified-user' %}
+                                                    {% set span_security_roll = 'span-avatar-verified-user' %}
+                                                    {% set user_security_roll = 'filters-roles-verified-user' %}
+                                                {% elseif 'STANDARD' in app.user.roles|join(', ') %}
+                                                    {% set navbar_avatar = 'navbar-avatar-standard-user' %}
+                                                    {% set span_security_roll = 'span-avatar-standard-user' %}
+                                                    {% set user_security_roll = 'filters-roles-standard-user' %}
+                                                {% else %}
+                                                    {% set navbar_avatar = 'table-avatar-guest-user' %}
+                                                    {% set span_security_roll = 'span-avatar-guest-user' %}
+                                                    {% set user_security_roll = 'filters-roles-guest-user' %}
+                                                {% endif %}
+                                                <span class="bx bx-fw bx-user {{ span_security_roll }}" title="{{ user_security_roll|trans|raw }}"></span>
+                                                {{ app.user.usersname }}
+                                            </a>
+                                            <div class="dropdown-menu mt-3 shadow" aria-labelledby="dropdownMenuGrid">
+{% for item in users %}
+{% if item.divider is defined %}
+                                                <div class="dropdown-divider"></div>
+{% else %}
+                                                <div class="dropdown-item">
+                                                    <a href="{{ path(item.link) }}" title="{{ item.label|trans|raw }}">
+                                                        <i class="{{ item.fav }}"></i>
+                                                        {{ item.label|trans|raw }}
+                                                    </a>
+                                                </div>
+{% endif %}
+{% endfor %}
+                                            </div>
+                                        </div>
+                                    </li>
+{% else %}
+                                    <li class="list-group-item border-0 px-1 bg-transparent"><a href="{{ url('app_security_signin_index')}}"  title="{{ 'nav-link-security-signin'|trans|raw }}"><i class="bi bi-person-square"></i></a></li>
+{% endif %}
+
+{% endif %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>

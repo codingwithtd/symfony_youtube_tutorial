@@ -1,0 +1,19 @@
+            <section class="site-page-warnings">
+                <div class="container d-flex flex-column rounded">
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <div class="row mt-2 border-bottom border-1 mb-2">
+                                <h5 class="text-end">
+                                    <span class="text-uppercase">{{ page_section }}</span> <span class="splitter">|</span>
+                                    <span class="text-muted small">{{ page_title }}</span>
+                                </h5>
+                            </div>
+                            <div class="row">
+                                <div class="alert alert-warning mt-2 small">
+                                    <span class="badge bg-warning text-uppercase">{{ 'alert-warning'|trans|raw }}</span> {{ 'alert-page-warning-message-meaning'|trans|raw|replace({'%page-name%': app.request.attributes.get('_route')}) }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>

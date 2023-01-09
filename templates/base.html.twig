@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+{% block head %}{% endblock %}
+
+        <title>{% block title %}{{ 'app-text-site-title'|trans|raw }}{% endblock %}</title>
+
+        {% block stylesheets %}{{ encore_entry_link_tags('app') }}{% endblock %}
+        {% block javascripts %}{{ encore_entry_script_tags('app') }}{% endblock %}
+
+        <link rel="shortcut icon" href="{{ asset('favicon.ico', 'favicon') }}" type="image/x-icon">
+        <link rel="icon" href="{{ asset('favicon.ico', 'favicon') }}" type="image/x-icon">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png', 'favicon') }}">
+        <link rel="icon" type="image/png" sizes="192x192"  href="{{ asset('android-chrome-192x192.png', 'favicon') }}">
+        <link rel="icon" type="image/png" sizes="512x512"  href="{{ asset('android-chrome-512x512.png', 'favicon') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png', 'favicon') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png', 'favicon') }}">
+    </head>
+    <body>
+{{ include('_includes/offcanvas/index.html.twig') }}
+        <header class="fixed-top shadow">
+{{ include('_includes/header/index.html.twig') }}
+        </header>
+        <main class="h-100">
+{% if ('default_index' in app.request.get('_route')) %}
+{% block body %}{% endblock %}
+{% elseif (page_content_url is not defined) and (page_content is not defined) and (page_params is not defined) %}
+{{ include('_includes/messages/danger/index.html.twig') }}
+{% elseif (page_content_url is empty) or (page_content is empty) or (page_params is empty) %}
+{{ include('_includes/messages/warnings/index.html.twig') }}
+{% else %}
+{% block main %}{% endblock %}
+{% endif %}
+        </main>
+        <footer>
+{{ include('_includes/footer/index.html.twig') }}
+        </footer>
+{{ include('_includes/cookies/index.html.twig') }}
+</body>
+</html>

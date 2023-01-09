@@ -1,0 +1,13 @@
+            <section class="site-page-danger">
+                <div class="container d-flex flex-column rounded">
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="alert alert-danger mt-2 small">
+                                    <span class="badge bg-danger text-uppercase">{{ 'alert-danger'|trans|raw }}</span> {{ 'alert-page-danger-message-meaning'|trans|raw|replace({'%page-name%': app.request.attributes.get('_route')}) }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>

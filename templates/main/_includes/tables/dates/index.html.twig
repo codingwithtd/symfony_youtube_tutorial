@@ -1,0 +1,49 @@
+{% if list.updatedAt is empty %}
+    <td data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="{{ list.createdAt ? list.createdAt|date }}">
+        &nbsp;{{ list.createdAt ? list.createdAt|date }}
+        <span class="visually-hidden">
+        {{ list.createdAt ? list.createdAt|date }}
+    </span>
+    </td>
+{% else %}
+    <td data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="{{ list.updatedAt ? list.updatedAt|date }}">
+        &nbsp;{{ list.updatedAt ? list.updatedAt|date }}
+        <span class="visually-hidden">
+        {{ list.updatedAt ? list.updatedAt|date }}
+    </span>
+    </td>
+{% endif %}
+<td>
+    {% if list.updatedBy == 'Unknown' %}
+        {{ list.createdBy }}
+    {% else %}
+        {{ list.updatedBy }}
+    {% endif %}
+</td>
+<td>
+    <div class="dropdown">
+        <a class="dropdown-toggle" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bx bx-fw bx-dots-horizontal"></i>
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+                <a class="dropdown-item" href="{{ path(page_params.show_url, {'id': list.id}) }}">
+                    <i class="bx-fw bx bxs-window-alt" title="{{ 'text-view'|trans|raw }} {{ page_params.page_title }}" data-bs-toggle="tooltip"></i>
+                    {{ 'text-view'|trans|raw }} {{ page_params.page_title }}
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="{{ path(page_params.edit_url, {'id': list.id}) }}">
+                    <i class="bx-fw bx bxs-edit-alt" title="{{ 'text-edit'|trans|raw }} {{ page_params.page_title }}" data-bs-toggle="tooltip"></i>
+                    {{ 'text-edit'|trans|raw }} {{ page_params.page_title }}
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="{{ path(page_params.show_url, {'id': list.id}) }}">
+                    <i class="bx-fw bx bxs-trash" title="{{ 'text-delete'|trans|raw }} {{ page_params.page_title }}" data-bs-toggle="tooltip"></i>
+                    {{ 'text-delete'|trans|raw }} {{ page_params.page_title }}
+                </a>
+            </li>
+        </ul>
+    </div>
+</td>

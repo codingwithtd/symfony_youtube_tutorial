@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-12"><hr class="hr-line-color" /></div>
+</div>
+<div class="row px-3 text-end">
+    <div class="col-12">
+        <button type="submit" class="btn btn-sm btn-success mt-3">
+            <i class="bx bx-fw bx-save"></i>
+            {{ button_label|default('button-save'|trans|raw) }}
+        </button>
+        <button type="reset" class="btn btn-sm btn-warning mt-3">
+            <i class="bx bx-fw bx-reset"></i>
+            {{ button_label|default('button-reset'|trans|raw) }}
+        </button>
+        <a href="{{ url(page_params.index_url) }}" title="{{ 'button-view-list'|trans|raw|replace({'%page_title%': page_title }) }}" class="btn btn-sm btn-secondary mt-3">
+            <i class="bx bx-fw bx-list-ol"></i>
+            {{ 'button-view-list'|trans|raw|replace({'%page_title%': page_title }) }}
+        </a>
+    </div>
+</div>

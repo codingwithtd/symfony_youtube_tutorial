@@ -1,0 +1,135 @@
+            <div class="container">
+{% if not is_granted('IS_AUTHENTICATED_FULLY')  %}
+                <div class="row justify-content-center">
+                    <div class="col-10 col-lg-6">
+                        <div class="subscribe mb-5">
+                            <form action="#">
+                                <div class="form-group d-flex">
+                                    <label class="w-100">
+                                        <input type="text" class="form-control rounded-left" placeholder="{{ 'app-text-site-enter-email-address'|trans|raw }}">
+                                    </label>
+                                    <button type="submit" class="form-control submit px-3">{{ 'button-subscribe'|trans|raw }}</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-lg-5">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-8 mb-md-0">
+                                <h2 class="text-uppercase text-white-50 mb-0 pb-0">{{ 'app-text-site-title'|trans|raw }}</h2>
+                                <p class="text-muted mt-0 pt-0">{{ 'app-text-site-slogan'|trans|raw }}</p>
+                                <p>{{ 'app-text-site-slogan-meaning'|trans|raw }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-lg-7">
+                        <div class="row">
+                            <div class="col-md-3 mb-md-0">
+                                <h5 class="text-white-50 text-uppercase">{{ 'nav-link-site-about'|trans|raw }}</h5>
+                                <ul class="list-unstyled mb-0 pb-0">
+{% if header is defined %}
+{% for item in header %}
+{% if (item.dropdown is defined) and (item.section == 'about') %}
+{% for item in item.dropdown|slice(0,4) %}
+{% if item.divider is defined %}{% else %}
+                                    <li class="medium-links"><a href="{{ url(item.link) }}" title="{{ item.title|trans|raw }}">{{ item.label|trans|raw }}</a></li>
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endfor %}
+                                </ul>
+                            </div>
+                            <div class="col-md-6 mb-md-0">
+                                <h5 class="text-white-50 text-uppercase">{{ 'nav-link-site-services'|trans|raw }}</h5>
+                                <div class="row">
+                                    <div class="col-auto">
+                                        <ul class="list-unstyled mb-0 pb-0">
+{% for item in header %}
+{% if (item.dropdown is defined) and (item.section == 'services') %}
+{% for item in item.dropdown|slice(0,4) %}
+{% if item.divider is defined %}{% else %}
+                                            <li class="medium-links"><a href="{{ url(item.link) }}" title="{{ item.title|trans|raw }}">{{ item.label|trans|raw }}</a></li>
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endfor %}
+                                        </ul>
+                                    </div>
+                                    <div class="col-auto">
+                                        <ul class="list-unstyled mb-0 pb-0">
+{% for item in header %}
+{% if (item.dropdown is defined) and (item.section == 'services') %}
+{% for item in item.dropdown|slice(4,4) %}
+{% if item.divider is defined %}{% else %}
+                                            <li class="medium-links"><a href="{{ url(item.link) }}" title="{{ item.title|trans|raw }}">{{ item.label|trans|raw }}</a></li>
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endfor %}
+                                        </ul>
+                                    </div>
+                                    <div class="col-auto">
+                                        <ul class="list-unstyled mb-0 pb-0">
+{% for item in header %}
+{% if (item.dropdown is defined) and (item.section == 'services') %}
+{% for item in item.dropdown|slice(8,4) %}
+{% if item.divider is defined %}{% else %}
+                                            <li class="medium-links"><a href="{{ url(item.link) }}" title="{{ item.title|trans|raw }}">{{ item.label|trans|raw }}</a></li>
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-md-0">
+                                <h5 class="text-white-50 text-uppercase">{{ 'nav-link-site-security'|trans|raw }}</h5>
+                                <ul class="list-unstyled mb-0 pb-0">
+{% for item in header %}
+{% if (item.dropdown is defined) and (item.section == 'security') %}
+{% for item in item.dropdown %}
+{% if item.divider is defined %}{% else %}
+                                    <li class="medium-links"><a href="{{ url(item.link) }}" title="{{ item.title|trans|raw }}">{{ item.label|trans|raw }}</a></li>
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endfor %}
+{% endif %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-md-3">
+                    <div class="col-md-6">
+                        <p class="mb-0 pb-0 text-muted">
+                            {{ 'app-text-site-title'|trans|raw }} {{ 'app-text-site-version'|trans|raw }} {{ "now"|date("Y") }} &copy; {{ 'app-text-site-copyright'|trans|raw }} | {{ 'app-text-site-rights-reserved'|trans|raw }}
+                        </p>
+                        <p class="mb-0 pb-0 mt-0 pt-0 small text-muted">
+                            <img src="{{ asset('za.gif', 'flag') }}" title="{{ 'app-text-site-country'|trans|raw }}" class="img-fluid" alt="{{ 'app-text-site-country'|trans|raw }}"> {{ 'app-text-site-country'|trans|raw }}, {{ 'app-text-site-city'|trans|raw }}
+                        </p>
+                        <p class="mt-0 pt-0 small text-muted">{{ 'app-text-site-powered-by'|trans|raw }}: <a href="" class="text-muted" title="{{ 'app-text-site-powered-by-meaning'|trans|raw }}">{{ 'app-text-site-powered-by-meaning'|trans|raw }}</a></p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a class="small-links" href="{{ url('app_home_dashboard_index') }}" class="pe-2" data-toggle="tooltip" data-placement="top" title="{{ 'nav-link-site-disclaimer'|trans|raw }}">{{ 'nav-link-site-disclaimer'|trans|raw }}</a>&nbsp;&nbsp;|
+                        <a class="small-links" href="{{ url('app_home_dashboard_index') }}" class="pe-2 ps-2" data-toggle="tooltip" data-placement="top" title="{{ 'nav-link-site-terms'|trans|raw }}">{{ 'nav-link-site-terms'|trans|raw }}</a>&nbsp;&nbsp;|
+                        <a class="small-links" href="{{ url('app_home_dashboard_index') }}" class="ps-2" data-toggle="tooltip" data-placement="top" title="{{ 'nav-link-site-privacy'|trans|raw }}">{{ 'nav-link-site-privacy'|trans|raw }}</a>
+                    </div>
+                </div>
+{% else %}
+                <div class="row pt-3">
+                    <div class="col-md-6">
+                        <p class="mb-0 pb-0 text-muted">
+                            {{ 'app-text-site-title'|trans|raw }} {{ 'app-text-site-version'|trans|raw }}  {{ "now"|date("Y") }} &copy; {{ 'app-text-site-copyright'|trans|raw }} | {{ 'app-text-site-rights-reserved'|trans|raw }}
+                        </p>
+                        <p class="mb-0 pb-0 mt-0 pt-0 small text-muted">
+                            <img src="{{ asset('za.gif', 'flag') }}" title="{{ 'app-text-site-country'|trans|raw }}" class="img-fluid" alt="{{ 'app-text-site-country'|trans|raw }}"> {{ 'app-text-site-country'|trans|raw }}, {{ 'app-text-site-city'|trans|raw }}
+                        </p>
+                        <p class="mt-0 pt-0 small text-muted">{{ 'app-text-site-powered-by'|trans|raw }}: <a href="" class="text-muted" title="{{ 'app-text-site-powered-by-meaning'|trans|raw }}">{{ 'app-text-site-powered-by-meaning'|trans|raw }}</a></p>
+                    </div>
+                </div>
+{% endif %}
+            </div>

@@ -1,0 +1,111 @@
+{% extends 'base.html.twig' %}
+{% block head %}
+    <meta name="robots" content="NOINDEX, NOFOLLOW" />
+{% endblock %}
+
+{% set page_icon = 'bx-fw fs-5 bx bxs-dashboard' %}
+{% if (page_params is defined) and (page_params is not empty) %}
+    {% set page_section = page_params.page_section %}
+    {% set page_title = page_params.page_title %}
+    {% set page_icon = page_params.page_icon %}
+{% else %}
+    {% set page_section = 'page_section' %}
+    {% set page_title = 'page_title' %}
+{% endif %}
+{% if 'edit' in app.request.get('_route') %}
+    {% set page_title_prefix = 'text-edit'|trans|raw %}
+{% elseif 'new' in app.request.get('_route') %}
+    {% set page_title_prefix = 'text-create-new'|trans|raw %}
+{% elseif 'show' in app.request.get('_route') %}
+    {% set page_title_prefix = 'text-view'|trans|raw %}
+{% elseif 'reset' in app.request.get('_route') %}
+    {% set page_title_prefix = 'text-reset'|trans|raw %}
+{% elseif 'dashboard' in app.request.get('_route') %}
+    {% set page_title_prefix = '' %}
+{% else %}
+    {% set page_title_prefix = 'text-list'|trans|raw %}
+{% endif %}
+
+{% block title %}{{ page_section }} | {{ page_title_prefix }} {{ page_title }} - {{ parent() }}{% endblock %}
+{% block main %}
+{% if ('_index' in app.request.get('_route') and not ('_dashboard' in app.request.get('_route'))) %}
+            <section id="site-admin">
+                <div class="container-fluid d-flex flex-column rounded" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="500">
+                    <div class="row mt-3 ms-1 me-1">
+                        <div class="col-12">
+                            <div class="row mt-2 border-bottom border-1 mb-2">
+                                <h5 class="text-end">
+                                    <span class="{{ page_icon }}"></span>
+                                    <span class="text-uppercase">{{ page_section }}</span> <span class="splitter">|</span>
+                                    <span class="text-muted small">{{ page_title_prefix }} {{ page_title }}</span>
+                                </h5>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm justify-content-between">
+                                    <a class="btn btn-sm btn-secondary" href="javascript:history.back()" title="{{ 'button-back'|trans|raw }}">
+                                        <i class="bx-fw bx bxs-left-arrow-alt"></i>
+                                        {{ 'button-back'|trans|raw }}
+                                    </a>
+                                    <a class="btn btn-sm btn-secondary" href="javascript:history.forward()" title="{{ 'button-forward'|trans|raw }}">
+                                        {{ 'button-forward'|trans|raw }}
+                                        <i class="bx-fw bx bxs-right-arrow-alt"></i>
+                                    </a>
+                                </div>
+                                <div class="col-sm text-end justify-content-between">
+                                    <a href="{{ url(page_params.index_url) }}" title="{{ 'button-refresh'|trans|raw }}" class="btn btn-sm btn-primary">
+                                        <i class="bx bx-fw bx-refresh"></i>
+                                        {{ 'button-refresh'|trans|raw }}
+                                    </a>
+                                    <a class="btn btn-sm btn-secondary" title="{{ 'button-create-new'|trans|raw }}" href="{{ url(page_params.new_url) }}">
+                                        <i class="bx-fw bx bx-plus"></i>
+                                        {{ 'button-create-new'|trans|raw }}
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+{{ include(page_content_url) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+{% else %}
+    <section id="site-admin">
+        <div class="container d-flex flex-column rounded" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="500">
+            <div class="row mt-3 ms-1 me-1">
+                <div class="col-9">
+                    <div class="row mt-2 border-bottom border-1 mb-2">
+                        <h5 class="text-end">
+                            <span class="{{ page_icon }}"></span>
+                            <span class="text-uppercase">{{ page_section }}</span> <span class="splitter">|</span>
+                            <span class="text-muted small">{{ page_title_prefix }} {{ page_title }}</span>
+                        </h5>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm justify-content-between">
+                            <a class="btn btn-sm btn-secondary" href="javascript:history.back()" title="{{ 'button-back'|trans|raw }}">
+                                <i class="bx-fw bx bxs-left-arrow-alt"></i>
+                                {{ 'button-back'|trans|raw }}
+                            </a>
+                            <a class="btn btn-sm btn-secondary" href="javascript:history.forward()" title="{{ 'button-forward'|trans|raw }}">
+                                {{ 'button-forward'|trans|raw }}
+                                <i class="bx-fw bx bxs-right-arrow-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+{{ include(page_content_url) }}
+                    </div>
+                </div>
+                <div class="col-3">
+{% if 'filters' in app.request.get('_route') %}
+{{ include('main/_includes/sidebar/filters/index.html.twig') }}
+{% else %}
+{{ include('main/_includes/sidebar/index.html.twig') }}
+{% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endif %}
+{% endblock %}

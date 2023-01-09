@@ -1,0 +1,109 @@
+<div class="tab-form py-3 px-3 rounded mb-5">
+    <nav>
+        <div class="position-relative">
+            <div class="position-absolute top-0 end-0 mt-2">
+                {% if page_content.isActive  %}
+                    <span class="badge bg-success text-uppercase">{{ 'text-active'|trans|raw }}</span>
+                {% else %}
+                    <span class="badge bg-danger text-uppercase">{{ 'text-deactivated'|trans|raw }}</span>
+                {% endif %}
+            </div>
+        </div>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-particulars-tab" data-bs-toggle="tab" data-bs-target="#nav-particulars" type="button" role="tab" aria-controls="nav-particulars" aria-selected="true">
+                {{ 'tabs-particulars'|trans|raw }}
+            </button>
+            <button class="nav-link" id="nav-translation-tab" data-bs-toggle="tab" data-bs-target="#nav-translation" type="button" role="tab" aria-controls="nav-custom" aria-selected="true">
+                {{ 'tabs-translation'|trans|raw }}
+            </button>
+            <button class="nav-link" id="nav-approved-tab" data-bs-toggle="tab" data-bs-target="#nav-approved" type="button" role="tab" aria-controls="nav-approved" aria-selected="true">
+                {{ 'tabs-approved'|trans|raw }}
+            </button>
+        </div>
+    </nav>
+    {{ include('main/_includes/message/success/index.html.twig') }}
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-particulars" role="tabpanel" aria-labelledby="nav-particulars-tab">
+            <div class="pt-3 pb-3">
+                <div class="row">
+                    <div class="col-12 text-end mt-2"><h5 class="h5-font-color">{{ page_title }} {{ 'text-translation-auto-key'|trans|raw }}</h5><hr class="hr-line-color" /></div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="alert alert-dark shadow-sm ps-2 pb-2 mt-2">
+                            <span class="alert-label">{{ 'label-translation-key'|trans|raw }}</span>
+                            <p class="m-0 pe-0 pb-0 ps-1 pt-2">
+                                {% if page_content.translationKey  %}
+                                    {{ page_content.translationKey }}
+                                {% else %}
+                                    <span class="text-orange">{{ 'alert-empty-records'|trans|raw }}</span>
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="alert alert-dark shadow-sm ps-2 pb-2 mt-2">
+                            <span class="alert-label">{{ 'label-translation-value'|trans|raw }}</span>
+                            <p class="m-0 pe-0 pb-0 ps-1 pt-2">
+                                {% if page_content.translationValue  %}
+                                    {{ page_content.translationValue }}
+                                {% else %}
+                                    <span class="text-orange">{{ 'alert-empty-records'|trans|raw }}</span>
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-6"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="nav-translation" role="tabpanel" aria-labelledby="nav-tranlsation-tab">
+            <div class="pt-3 pb-3">
+                <div class="row">
+                    <div class="col-12 text-end mt-2"><h5 class="h5-font-color">{{ page_title }} {{ 'text-translation'|trans|raw }}</h5><hr class="hr-line-color" /></div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="alert alert-dark shadow-sm ps-2 pb-2 mt-2">
+                            <span class="alert-label">
+                                {{ 'label-translation-locale-choice'|trans|raw }}
+                            </span>
+                            <p class="m-0 pe-0 pb-0 ps-1 pt-2">
+                                {% if page_content.filterTranslation  %}
+                                    {% for translation in page_content.filterTranslation %}
+                                    {{ ('app-text-site-locale-'~translation.translationLocale)|replace({'_':'-'})|trans|raw }}
+                                    {% endfor %}
+                                {% else %}
+                                    <span class="text-orange">{{ 'alert-empty-records'|trans|raw }}</span>
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="alert alert-dark shadow-sm ps-2 pb-2 mt-2">
+                            <span class="alert-label">{{ 'label-translation-description'|trans|raw }}</span>
+                            <p class="m-0 pe-0 pb-0 ps-1 pt-2">
+                                {% if page_content.filterTranslation  %}
+                                    {% for translation in page_content.filterTranslation %}
+                                        {{ translation.translationDescription }}
+                                    {% endfor %}
+                                {% else %}
+                                    <span class="text-orange">{{ 'alert-empty-records'|trans|raw }}</span>
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{ include('main/_includes/tabs/show/index.html.twig') }}
+
+    </div>
+    {{ include('main/_includes/buttons/delete/index.html.twig') }}
+</div>

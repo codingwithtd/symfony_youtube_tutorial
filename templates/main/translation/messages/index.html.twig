@@ -1,0 +1,67 @@
+<div class="site-tables rounded py-3 px-3 mb-5">
+    <div class="row">
+        <div class="col-12 text-end">
+            <a href="{{ path('app_main_translation_export_messages_index') }}" class="btn btn-sm btn-secondary" title="{{ 'button-export-translation-yaml'|trans|raw }}">
+                {{ 'button-export-translation-yaml'|trans|raw }}
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container-fluid">
+        {{ include('main/_includes/message/success/index.html.twig') }}
+        </div>
+        <table id="dataTable" class="table table-sm table-striped table-hover rounded table-font-size" style="width:100%">
+            <thead>
+            <tr>
+                <th class="th-id">#</th>
+                <th class="th-active">
+                    {{ 'label-toggle-active'|trans|raw }}
+                </th>
+                <th>{{ 'label-translation-key'|trans|raw }}</th>
+                <th>{{ 'label-translation-category-choice'|trans|raw }}</th>
+                <th>{{ 'label-translation'|trans|raw }}</th>
+                <th class="th-update-at">
+                    <i class="bx bx-fw bx-calendar" title="{{ 'text-updated-at'|trans|raw }}"></i>
+                    <span class="visually-hidden">{{ 'text-updated-at'|trans|raw }}</span>
+                </th>
+                <th class="th-update-by">
+                    <i class="bx bx-fw bx-user" title="{{ 'text-updated-by'|trans|raw }}"></i>
+                    <span class="visually-hidden">{{ 'text-updated-by'|trans|raw }}</span>
+                </th>
+                <th class="th-actions">
+                    <i class="bx bx-fw bx-dots-horizontal" title="{{ 'text-actions'|trans|raw }}"></i>
+                    <span class="visually-hidden">{{ 'text-actions'|trans|raw }}</span>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for list in page_content %}
+                <tr>
+                    <td>{{ list.id }}</td>
+                    {{ include('main/_includes/tables/active/index.html.twig') }}
+                    <td>{{ list.translationKey }}</td>
+                    <td>
+                        {% if (list.MainFilterTranslationCategories.filterTranslation is not null) %}
+                            {% for translation in list.MainFilterTranslationCategories.filterTranslation %}
+                                {{ translation }}
+                            {% endfor %}
+                        {% else %}
+
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if (list.filterTranslation is not null) %}
+                            {% for translation in list.filterTranslation %}
+                                {{ translation }}
+                            {% endfor %}
+                        {% else %}
+
+                        {% endif %}
+                    </td>
+                    {{ include('main/_includes/tables/dates/index.html.twig') }}
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>

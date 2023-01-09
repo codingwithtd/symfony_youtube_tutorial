@@ -1,0 +1,5 @@
+{% for message in app.flashes('success') %}
+    <div class="alert alert-success small mt-4">
+        <span class="badge bg-success">{{ 'alert-success'|trans|raw }}</span> #The {{ page_title|lower}} {{ message|trans|raw }}
+    </div>
+{% endfor %}

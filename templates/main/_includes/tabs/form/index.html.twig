@@ -1,0 +1,33 @@
+{% if 'edit' in app.request.get('_route') %}
+    <div class="tab-pane fade" id="nav-approved" role="tabpanel" aria-labelledby="nav-approved-tab">
+        <div class="pt-3 pb-3">
+            <div class="row">
+                <div class="col-12 text-end"><h5 class="h5-font-color">{{ page_title }} {{ 'text-approval-particulars'|trans|raw }}</h5><hr class="hr-line-color" /></div>
+            </div>
+            <div class="row">
+                <div class="col-6"></div>
+                <div class="col-6">{{ form_row(page_form.formApprovals.isApproved) }}</div>
+            </div>
+            <div class="row">
+                <div class="col-6">{{ form_row(page_form.formApprovals.approvedAt) }}</div>
+                <div class="col-6">{{ form_row(page_form.formApprovals.approvedBy) }}</div>
+            </div>
+        </div>
+    </div>
+{% else %}
+    <div class="tab-pane fade" id="nav-approved" role="tabpanel" aria-labelledby="nav-approved-tab">
+        <div class="pt-3 pb-3">
+            <div class="row">
+                <div class="col-12 text-end"><h5 class="h5-font-color">{{ page_title }} {{ 'text-approval-particulars'|trans|raw }}</h5><hr class="hr-line-color" /></div>
+            </div>
+            <div class="row">
+                <div class="col-6"></div>
+                <div class="col-6">{{ form_row(page_form.formApprovals.isApproved) }}</div>
+            </div>
+            <div class="row">
+                <div class="col-6">{{ form_row(page_form.formApprovals.approvedAt) }}</div>
+                <div class="col-6">{{ form_row(page_form.formApprovals.approvedBy) }}</div>
+            </div>
+        </div>
+    </div>
+{% endif %}

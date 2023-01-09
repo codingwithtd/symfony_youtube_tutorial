@@ -1,0 +1,13 @@
+{% if page_form is defined %}
+    {% set formErrors = page_form.vars.errors.form.getErrors(true) %}
+    {% if formErrors|length %}
+        <ul class="list-unstyled mt-4">
+            {% for error in formErrors %}
+                <li class="alert alert-danger">
+                    <span class="badge bg-danger">{{ 'alert-error'|trans|raw }}</span>
+                    #{{ page_section }} {{ page_title }}  page - {{ error.message }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endif %}

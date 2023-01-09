@@ -1,0 +1,23 @@
+<div class="position-absolute top-0 end-0 mt-2">
+    {% if (page_content.isActive) %}
+        {% if (page_content.isApproved) %}
+            <span class="badge bg-success text-uppercase">
+                      {{ 'text-active'|trans|raw }}
+                </span>
+        {% else %}
+            <span class="badge bg-orange text-uppercase">
+                      {{ 'text-pending'|trans|raw }}
+                </span>
+        {% endif %}
+    {% else %}
+        {% if (page_content.isApproved) %}
+            <span class="badge bg-warning text-uppercase">
+                 {{ 'text-inactive'|trans|raw }}
+            </span>
+        {% else %}
+            <span class="badge bg-danger text-uppercase">
+                 {{ 'text-deactivated'|trans|raw }}
+            </span>
+        {% endif %}
+    {% endif %}
+</div>

@@ -1,0 +1,57 @@
+<div class="tab-form py-3 px-3 rounded mb-5">
+    {{ form_start(page_form) }}
+    <nav>
+        <div class="position-relative">
+            <div class="position-absolute top-0 end-0 mt-2">
+                {{ form_row(page_form.formActivity.isActive) }}
+            </div>
+        </div>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-particulars-tab" data-bs-toggle="tab" data-bs-target="#nav-particulars" type="button" role="tab" aria-controls="nav-particulars" aria-selected="true">
+                {{ 'tabs-particulars'|trans|raw }}
+            </button>
+            <button class="nav-link" id="nav-custom-tab" data-bs-toggle="tab" data-bs-target="#nav-custom" type="button" role="tab" aria-controls="nav-custom" aria-selected="true">
+                {{ 'tabs-custom'|trans|raw }}
+            </button>
+            <button class="nav-link" id="nav-approved-tab" data-bs-toggle="tab" data-bs-target="#nav-approved" type="button" role="tab" aria-controls="nav-approved" aria-selected="true">
+                {{ 'tabs-approved'|trans|raw }}
+            </button>
+        </div>
+    </nav>
+    {{ include('main/_includes/message/errors/index.html.twig') }}
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-particulars" role="tabpanel" aria-labelledby="nav-particulars-tab">
+            <div class="pt-3 pb-3">
+                <div class="row">
+                    <div class="col-12 text-end mt-2"><h5 class="h5-font-color">{{ page_title }} {{ 'text-translation-auto-key'|trans|raw }}</h5><hr class="hr-line-color" /></div>
+                </div>
+                <div class="row">
+                    <div class="col-12">{{ form_row(page_form.formFilterTranslation.translationKey) }}</div>
+                </div>
+                <div class="row">
+                    <div class="col-6">{{ form_row(page_form.formFilterTranslation.translationValue) }}</div>
+                    <div class="col-6">{{ form_row(page_form.mainFilterTranslationCategories) }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="nav-custom" role="tabpanel" aria-labelledby="nav-custom-tab">
+            <div class="pt-3 pb-3">
+                <div class="row">
+                    <div class="col-12 text-end mt-2"><h5 class="h5-font-color">{{ page_title }} {{ 'text-translation-custom-key'|trans|raw }}</h5><hr class="hr-line-color" /></div>
+                </div>
+                <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-6">{{ form_row(page_form.formFilterCustom.isCustomKey) }}</div>
+                </div>
+                <div class="row">
+                    <div class="col-12">{{ form_row(page_form.formFilterCustom.customTranslationKey) }}</div>
+                </div>
+            </div>
+        </div>
+
+        {{ include('main/_includes/tabs/form/index.html.twig') }}
+
+    </div>
+    {{ include('main/_includes/buttons/save/index.html.twig') }}
+    {{ form_end(page_form) }}
+</div>

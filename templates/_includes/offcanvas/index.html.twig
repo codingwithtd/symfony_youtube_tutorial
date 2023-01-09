@@ -1,0 +1,70 @@
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasSidebar" aria-labelledby="offcanvasSidebarLabel">
+            <div class="offcanvas-header shadow">
+                <a href="{{ url('app_home_dashboard_index')}}" class="ms-3" title="{{ 'app-text-site-title'|trans|raw }}" >
+                    <div class="offcanvas-logo rounded-2"></div>
+                </a>
+                <a class="offcanvas-close pe-1" data-bs-dismiss="offcanvas" title="{{ 'button-close'|trans|raw }}">X</a>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
+                    {% if offcanvas.dashboard is defined %}
+                    <li class="border-bottom w-100 rounded">
+                        {% for item in offcanvas.dashboard %}
+                            <a href="{{ url(item.link) }}" class="nav-link text-menu-heading" title="{{ item.label|trans|raw }}">
+                                <i class="{{ item.fav }}"></i>
+                                <span class="ms-1 d-none d-sm-inline">{{ item.label|trans|raw }}</span>
+                            </a>
+                        {% endfor %}
+                    </li>
+                    {% endif %}
+                    {% if offcanvas.translationsmenu is defined %}
+                        <li class="border-bottom w-100">
+                            {% for item in offcanvas.translationsmenu %}
+                                <a href="#translations-submenu" data-bs-toggle="collapse" class="{{ item.class }}" title="{{ item.label|trans|raw }}">
+                                    <i class="{{ item.fav }}"></i>
+                                    <span class="ms-1 d-none d-sm-inline">{{ item.label|trans|raw }}</span>
+                                    <i class="text-end bx-fw fs-5 bx bx-chevron-down"></i>
+                                </a>
+                            {% endfor %}
+                            {% if offcanvas.translationssubmenu is defined %}
+                                <ul class="collapse nav flex-column" id="translations-submenu" data-bs-parent="#menu">
+                                    <li class="w-100 nav-body">
+                                        {% for item in offcanvas.translationssubmenu %}
+                                            <a href="{{ url(item.link) }}" title="{{ item.label|trans|raw }}" class="{{ item.class }}">
+                                                <i class="bx-fw bx bxs-right-arrow-alt"></i>
+                                                {{ item.label|trans|raw }}
+                                            </a>
+                                        {% endfor %}
+                                        {% if offcanvas.translationsfiltersmenu is defined %}
+                                            {% for item in offcanvas.translationsfiltersmenu %}
+                                                <a href="#translations-filter-submenu" data-bs-toggle="collapse" class="{{ item.class }}" title="{{ item.label|trans|raw }}">
+                                                    <i class="{{ item.fav }}"></i>
+                                                    <span class="ms-1 d-none d-sm-inline">{{ item.label|trans|raw }}</span>
+                                                    <i class="text-end bx-fw fs-5 bx bx-chevron-down"></i>
+                                                </a>
+                                                <ul class="collapse nav flex-column" id="translations-filter-submenu" data-bs-parent="#filtermenu">
+                                                    <li class="w-100 nav-body">
+                                                        {% for item in offcanvas.translationsfiltersubmenu %}
+                                                            <a href="{{ url(item.link) }}" title="{{ item.label|trans|raw }}" class="{{ item.class }}">
+                                                                <i class="bx-fw bx bxs-right-arrow-alt"></i>
+                                                                {{ item.label|trans|raw }}
+                                                            </a>
+                                                        {% endfor %}
+                                                    </li>
+                                                </ul>
+                                            {% endfor %}
+                                        {% endif %}
+                                    </li>
+                                </ul>
+                            {% endif %}
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+            <div class="offcanvas-footer border-top">
+                <ul class="list-unstyled">
+                    <li class="small text-white-50">{{ 'app-text-site-powered-by'|trans|raw }}:</li>
+                    <li class="small text-white-50"><a href="" class="text-white-50" title="{{ 'app-text-site-powered-by-meaning'|trans|raw }}">{{ 'app-text-site-powered-by-meaning'|trans|raw }}</a></li>
+                </ul>
+            </div>
+        </div>
