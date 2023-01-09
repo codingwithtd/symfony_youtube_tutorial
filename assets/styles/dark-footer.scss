@@ -1,0 +1,42 @@
+@use 'global';
+[data-theme="dark"] {
+  footer {
+    min-height: 60px;
+    background-color: global.$bg-dark-footer;
+    color: global.$white-shade;
+    h2 {color: global.$primary-shade!important; }
+    h5 {color: global.$primary-shade!important; }
+    a {
+      color: global.$white-shade;
+      :hover { color: global.$primary-shade }
+    }
+    .subscribe {
+      form {
+        background-color: #3e4852;
+        .form-group {
+          input {
+            color: global.$white-shade!important;
+            :focus {
+              color: global.$white-shade!important;
+            }
+          }
+          ::-webkit-input-placeholder {
+            color: global.$white-shade!important
+          }
+
+          ::-moz-placeholder{
+            color: global.$white-shade!important
+          }
+
+          :-ms-input-placeholder {
+            color: global.$white-shade!important
+          }
+
+          :-moz-placeholder {
+            color: global.$white-shade!important
+          }
+        }
+      }
+    }
+  }
+}

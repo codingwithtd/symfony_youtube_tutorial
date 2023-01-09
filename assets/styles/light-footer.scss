@@ -1,0 +1,80 @@
+@use 'global';
+#footer{
+  margin-top: 35px;
+}
+footer {
+  min-height: 60px;
+  background-color: global.$bg-footer;
+  margin-top: 0; padding-top:5px; padding-bottom:5px; color: global.$white-shade; font-size: 85%;
+  .footer-brand {
+    background-image: url("../img/banner/header-logo.png");
+    height: 65px;
+    width: 210px;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: global.$white;
+  }
+  a {
+    color: global.$white-shade;
+    :hover { color: global.$primary-shade }
+  }
+  .border-top {
+    border-top-color: #3e4852 !important;
+  }
+  .border-start {
+    border-right-color: #3e4852 !important;
+  }
+  .border-bottom {
+    border-bottom-color: #3e4852 !important;
+  }
+  .border-end {
+    border-left-color: #3e4852 !important;
+  }
+  .subscribe {
+    margin-top: -35px;
+    form { background-color:#e9e8e6; border-radius:40px; padding:3px;-webkit-box-shadow:0 -12px 21px -15px rgba(0,0,0,.1);-moz-box-shadow:0 -12px 21px -15px rgba(0,0,0,.1);box-shadow:0 -12px 21px -15px rgba(0,0,0,.1)}
+    .form-group {
+      position:relative;margin-bottom:0;border-radius:0;
+
+      input {
+        background:transparent!important;border:none!important;outline:none!important;color:#000!important;font-size:16px;height:56px;border-radius:0 }
+
+      ::-webkit-input-placeholder {
+        color:rgba(0,0,0,.3)!important
+      }
+
+      ::-moz-placeholder{
+        color:rgba(0,0,0,.3)!important
+      }
+
+      :-ms-input-placeholder {
+        color:rgba(0,0,0,.3)!important
+      }
+
+      :-moz-placeholder {
+        color:rgba(0,0,0,.3)!important
+      }
+
+      :focus{
+        outline:none!important;-webkit-box-shadow:none;box-shadow:none; background-color: lavenderblush;
+      }
+      .submit {
+        color: #fff !important;
+        display: block;
+        width: 150px;
+        height: 56px;
+        font-size: 14px;
+        background: global.$bg-footer !important;
+        border: none;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border-radius: 40px;
+
+        :hover, footer .subscribe-form .form-group .submit:focus {
+          text-decoration: none !important;
+          outline: none !important
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,175 @@
+@use 'global';
+[data-theme="dark"] {
+  main {
+    background-color: global.$bg-dark-main;
+    color: global.$white-shade;
+    h1, h2, h3, h4, h5, h6 { color: global.$primary-shade; }
+    #site-home-page {
+      background-image: none;
+      .container {
+        background-color: rgba(255, 255, 255, 0.10);
+      }
+    }
+    #site-security, #site-home {
+      .form-security-div { background-color: global.$form-dark-bg }
+      form {
+        .form-text { color: #e4a818!important; }
+        label {
+          color: global.$primary-shade;
+        }
+        input {
+          background-color: #3e4852;
+          color: global.$white-shade;
+          :focus {
+            background-color: global.$success;
+          }
+        }
+        textarea {
+          background-color: #3e4852;
+          color: global.$white-shade;
+          :focus {
+            background-color: global.$primary-shade;
+          }
+        }
+      }
+    }
+    section {
+      .contact-us-form {
+        background-image: url("../img/home/map-image-invert.png");
+      }
+      .alert {
+        .alert-label { color: global.$primary-shade; }
+      }
+      .card {
+        background-color: global.$bg-dark-main;
+        .card-header {
+          background-color: global.$orange;
+          color: global.$white-shade;
+        }
+        .card-footer {
+          background-color: global.$bg-dark-main;
+          color: global.$black-shade;
+        }
+        .card-footer {
+          background-color: global.$secondary-shade;
+          color: global.$white-shade;
+        }
+      }
+      .tab-form {
+        background-color: global.$form-dark-bg;
+        margin-bottom: 15px;
+        .text-update { color: global.$primary-shade; }
+        .nav-link {color: global.$white-shade;}
+        .alert-dark {
+          background-color: global.$black-shade;
+          color: global.$white-shade;
+        }
+        .active {
+          background-color: global.$primary;
+          color: global.$white-shade;
+        }
+        .tab-pane {
+          background-color: global.$form-dark-bg;
+        }
+        .help-text { color: #e4a818!important; }
+        .readonly { color: global.$secondary-shade; }
+        label { color: global.$primary-shade; }
+        legend { color: global.$primary-shade!important; }
+        textarea {
+          background-color: #3e4852;
+          color: global.$white-shade;
+          :focus {
+            background-color: global.$primary-shade;
+          }
+        }
+        input {
+          background-color: #3e4852;
+          color: global.$white-shade;
+          :focus {
+            background-color: global.$primary-shade;
+          }
+        }
+        select {
+          background-color: #3e4852;
+          color: global.$white-shade;
+          :focus {
+            background-color: global.$primary-shade;
+          }
+        }
+        .form-check-label { color: global.$white-shade!important; }
+        .checkbox-inline { text-transform: uppercase; color: global.$primary-shade!important; font-weight: bold; }
+        .form-check-input::after {
+          background-color: global.$primary-shade!important;
+        }
+        .form-check-input::before {
+          background-color: global.$primary-shade!important;
+        }
+        .form-switch .form-check-input:focus {
+          border-color: rgba(0, 0, 0, 0.25);
+          outline: 0;
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+          background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(0,0,0,0.25)'/></svg>");
+        }
+        .form-switch .form-check-input:checked {
+          background-color: global.$primary!important;
+          border-color: global.$primary!important;
+          border: none;
+          background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/></svg>");
+        }
+      }
+      .site-tables {
+        background-color: global.$black-shade;
+        .dropdown-menu { background-color: #202327; border-color: #3e4852;
+          .dropdown-item { color: global.$white-shade;}
+          a { color: global.$white-shade; }
+          a:hover { color: global.$primary-shade; }
+          .dropdown-item:hover { background-color: #202327; }
+          .dropdown-item-text { color: global.$white-shade; }
+          .dropdown-divider { border-color: #3e4852;}
+        }
+        #dataTable_wrapper {
+          color: #a8abad;
+          a { color: global.$white-shade; text-decoration: none; }
+          .dataTables_paginate {
+            color: global.$white-shade;
+            .paginate_button {
+              background-color: global.$black-shade;
+              color: global.$white-shade!important;
+            }
+            .current {
+              background: global.$primary!important;
+              color: #fff;
+            }
+            .disabled {
+              color: #3e4852!important;
+            }
+          }
+          label {
+            color: #dcdcdd;
+          }
+
+          input {
+            background-color: #3e4852;
+            color: #dcdcdd;
+            :focus {
+              background-color: #bdbdbd;
+              color: #000;
+            }
+          }
+
+          select {
+            background-color: #3e4852;
+            color: #dcdcdd;
+            :focus {
+              background-color: #bdbdbd;
+              color: #000;
+            }
+          }
+          .dataTables_info { color: #a8abad; }
+          table tbody td { background-color: #3e4852; color: #dcdcdd; border-bottom: 1px solid #000 !important; }
+          table thead th { background-color: #202327; color: #dcdcdd; }
+        }
+      }
+    }
+  }
+}

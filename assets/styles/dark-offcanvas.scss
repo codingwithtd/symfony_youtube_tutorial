@@ -1,0 +1,15 @@
+@use 'global';
+[data-theme="dark"] {
+  .offcanvas {
+    .offcanvas-header { background-color: global.$bg-dark-header;
+    }
+    .offcanvas-body {
+      background-color: global.$bg-dark-main;
+      a { color: global.$white-shade; }
+      a:hover { color: global.$orange-shade; }
+      .nav-tag:hover { background-color: #3b434b; }
+      .nav-body { background-color: #202327; }
+    }
+    .offcanvas-footer { background-color: global.$bg-dark-footer;}
+  }
+}

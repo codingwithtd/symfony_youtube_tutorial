@@ -1,0 +1,22 @@
+@use 'global';
+.offcanvas {
+  .offcanvas-header { height: 65px; padding: 0; background-color: global.$bg-header;
+    .offcanvas-logo { margin-top: 5px; margin-left: 10px; background-image: url("../img/banner/header-logo.png"); height: 35px; width: 150px; background-position: center; background-repeat: no-repeat;}
+    .offcanvas-close { text-decoration: none; font-weight: bold; color: #6f6f6f; position: absolute; top: 0; right: 0; cursor: pointer; }
+    .offcanvas-close:hover { color: global.$primary-shade; }
+  }
+  .offcanvas-body { font-size: 85%;
+    background-color: global.$bg-main;
+    .text-menu-heading { text-transform: uppercase; font-weight: bolder; font-size: 13px; color:#434343; display: flex; align-items: center; }
+    .nav-tag:hover { background-color: #e9e8e6; }
+    a { color: #3c3f41; }
+    a:hover { color: global.$orange; }
+    .nav-body { background-color: #f3f2f1; }
+  }
+  .offcanvas-footer { min-height: 55px; padding: 10px 5px 5px 20px; background-color: global.$bg-footer;}
+}
+@media (min-width : 992px) {
+  .offcanvas {
+    width: 55px;
+  }
+}

@@ -1,0 +1,28 @@
+@use 'global';
+[data-theme="dark"] {
+  header {
+    background-color: global.$bg-dark-header;
+    .dark-switch {
+      h6 {font-weight: normal !important;}
+    }
+    .navbar {
+      .offcanvas-toggler { color: global.$white-shade; }
+      .navbar-nav {
+        .nav-item {
+          .nav-link { color: global.$white-shade;}
+          .nav-link:hover { color: global.$primary-shade; }
+        }
+      }
+      .dropdown {
+        .dropdown-menu { background-color: #202327; border-color: #3e4852;
+          .dropdown-item { color: global.$white-shade;}
+          a { color: global.$white-shade; }
+          a:hover { color: global.$primary-shade; }
+          .dropdown-item:hover { background-color: #202327; }
+          .dropdown-item-text { color: global.$white-shade; }
+          .dropdown-divider { border-color: #3e4852;}
+        }
+      }
+    }
+  }
+}

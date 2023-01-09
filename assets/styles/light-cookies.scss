@@ -1,0 +1,10 @@
+@use 'global';
+#cookie-consent {
+  position: fixed; bottom: 0; width: 100%; height: 45px; color: #fff; line-height: 20px; padding-left: 10px; padding-right: 10px; font-size: 14px; background: #292929; z-index: 997; cursor: pointer; border-radius: 0; display: flex; align-items: center; justify-content: center;
+  a { color: global.$primary-shade; text-decoration: none; }
+  :hover { color: #fff; }
+  button { height: 20px; width: 104px; color: #fff; font-size: 12px; line-height: 10px; border-radius: 3px; border: 1px solid white; }
+  .allow-button { background-color: global.$primary; }
+  .cancel-button { background-color: global.$secondary; }
+  @media (max-width: 992px) { #cookie-consent { height: 100px; }}
+}
