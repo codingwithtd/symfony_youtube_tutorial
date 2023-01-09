@@ -12,5 +12,5 @@
 <h3>3. Symfony Translations</h3>
 <p>"The end result we reaching for is so that the client or administrator of the application can change any translation them selves, e.g. spelling mistakes, change grammar, add languages to the application or change the button wording from Sign In to Login and back a gain, eish, instead of bugging me for these changes."</p>
 <p>https://www.youtube.com/watch?v=-tYR8lzycoY&list=PLcrzW81Ug8rcVscyNGYTKQ0L10ykroT5b&ab_channel=CodingwithTD</p>
-<h3>Symfony Security</h3>
+<h3>4. Symfony Security</h3>
 <p>Next up will be Symfony Security</p>
