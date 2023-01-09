@@ -1,7 +1,5 @@
 <h1>Symfony YouTube Tutorial(s)</h1>
-<p>I am a self-taught aspiring web developer and totally the opposite of an expert!</p>
-<p>I just love coding, it all started doing this for myself with various small projects running  on my home PC over the years for my own amusement. I am going to share with you what I've learned so far on my new journey!</p>
-
+<p>Welcome to the Coding with TD YouTube channel with Github repository where I'll share my knowledge throughout a series of videos. We'll explore and learn through trial and error.  This channel focus primarily on the Symfony Framework, but it also covers CSS, JavaScript, Bootstrap frameworks and packages, and other programming languages that I'm familiar with.</p>
 <h2>Tutorials on YouTube</h2>
 <p>https://www.youtube.com/@coding_with_TD</p>
 <h3>1. Symfony Application Installation</h3>
