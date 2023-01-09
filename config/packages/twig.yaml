@@ -1,0 +1,45 @@
+twig:
+    default_path: '%kernel.project_dir%/templates'
+    form_themes: [ 'bootstrap_5_layout.html.twig' ]
+
+    date:
+        format: 'D, d M Y H:i'
+        timezone: 'Africa/Johannesburg'
+
+    globals:
+        header:
+            - { link: 'app_home_dashboard_index', class: 'nav-item', title: 'nav-link-site-home',  label: 'nav-link-site-home' }
+            - { link: 'app_home_cheatsheet_index', class: 'nav-item', title: 'nav-link-site-home',  label: 'nav-link-site-cheatsheet' }
+        social:
+            - { link: 'app_home_dashboard_index', class: 'list-group-item border-0 px-1 bg-transparent', label: 'nav-link-follow-us-facebook', fav: 'bi bi-facebook' }
+            - { link: 'app_home_dashboard_index', class: 'list-group-item border-0 px-1 bg-transparent', label: 'nav-link-follow-us-twitter', fav: 'bi bi-twitter' }
+            - { link: 'app_home_dashboard_index', class: 'list-group-item border-0 px-1 bg-transparent', label: 'nav-link-follow-us-linked-in', fav: 'bi bi-linkedin' }
+            - { link: 'app_home_dashboard_index', class: 'list-group-item border-0 px-1 bg-transparent', label: 'nav-link-follow-us-instagram', fav: 'bi bi-instagram' }
+        darkswitch:
+            - { link: '#', class: 'list-group-item border-0 px-1 d-none d-sm-block bg-transparent', label: 'app-text-site-theme', fav: 'bi bi-menu-button-wide' }
+        locale:
+            - { class: 'nav-item', label: 'app-text-site-locale-af-za', img: 'za.gif', params: 'af_za' }
+            - { class: 'nav-item', label: 'app-text-site-locale-en-za', img: 'za.gif', params: 'en_za' }
+        users:
+            - { link: 'app_home_dashboard_index', class: 'nav-link nav-tag', label: 'nav-link-users-accounts', fav: 'bx bx-fw bx-card' }
+            - { link: 'app_home_dashboard_index', class: 'nav-link nav-tag', label: 'nav-link-users-avatars', fav: 'bx bx-fw bx-image-alt' }
+            - { link: 'app_home_dashboard_index', class: 'nav-link nav-tag', label: 'nav-link-users-settings', fav: 'bx bx-fw bx-wrench' }
+            - { divider: }
+            - { link: 'app_home_dashboard_index', class: 'nav-link nav-tag', label: 'nav-link-sign-off', fav: 'bx bx-fw bx-power-off' }
+        offcanvas:
+            dashboard:
+                - { link: 'app_home_dashboard_index', class: 'nav-item', label: 'link-section-admin', fav: 'bx-fw fs-5 bx bxs-dashboard' }
+            translationsmenu:
+                - { link: '#', class: 'nav-link text-menu-heading', label: 'section-main-translation', fav: 'bx-fw fs-5 bx bx-cabinet' }
+            translationssubmenu:
+                - { link: 'app_main_translation_messages_index', class: 'nav-link nav-tag', label: 'link-page-main-translation-messages' }
+                - { link: 'app_main_translation_securities_index', class: 'nav-link nav-tag', label: 'link-page-main-translation-securities' }
+                - { link: 'app_main_translation_validators_index', class: 'nav-link nav-tag', label: 'link-page-main-translation-validators' }
+            translationsfiltersmenu:
+                - { link: '#', class: 'nav-link text-menu-sub-heading', label: 'section-main-filter-translation', fav: 'bx-fw fs-5 bx bx-filter-alt' }
+            translationsfiltersubmenu:
+                - { link: 'app_main_filter_translation_categories_index', class: 'nav-link nav-tag', label: 'link-page-main-filter-translation-categories' }
+
+when@test:
+    twig:
+        strict_variables: true

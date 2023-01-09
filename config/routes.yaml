@@ -1,0 +1,22 @@
+controllers:
+    resource: ../src/Controller/
+    type: attribute
+    prefix: /{_locale}
+    requirements:
+        _locale: '%app_locales%'
+    defaults:
+        _locale: '%locale%'
+
+kernel:
+    resource: ../src/Kernel.php
+    type: annotation
+
+default_index:
+    path: /{_locale}/
+    controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController::templateAction
+    requirements:
+        _locale: '%app_locales%'
+    defaults:
+        template: home/default/index.html.twig
+        _locale: '%locale%'
+
