@@ -1,0 +1,25 @@
+is_act;filters_categories;translation_key;value;pri_trans;primary_translation;sec_trans;secondary_translation;pri_desc;primary_description;sec_desc;secondary_description
+1;filters-translations-categories-alerts;alert-admin-sidebar-warning-meaning;;1;This sidebar (admin-section) has been disabled, till further notice;1;Hierdie kantbalk (adminafdeling) is tot verdere kennisgewing gedeaktiveer;0;;0;
+1;filters-translations-categories-alerts;alert-client-sidebar-warning-meaning;;1;This sidebar (client-section) has been disabled, till further notice;1;Hierdie kantbalk (kli�ntafdeling) is tot verdere kennisgewing gedeaktiveer;0;;0;
+1;filters-translations-categories-alerts;alert-danger;;1;DANGER;1;GEVAAR;0;;0;
+1;filters-translations-categories-alerts;alert-empty-records;;1;No records specified;1;Geen rekords gespesifiseer nie;0;;0;
+1;filters-translations-categories-alerts;alert-error;;1;ERROR;1;FOUT;0;;0;
+1;filters-translations-categories-alerts;alert-home-sidebar-warning-meaning;;1;This sidebar (home-section) has been disabled, till further notice;1;Hierdie kantbalk (tuis-afdeling) is tot verdere kennisgewing gedeaktiveer;0;;0;
+1;filters-translations-categories-alerts;alert-info;;1;INFO;1;INLIGTING;0;;0;
+1;filters-translations-categories-alerts;alert-no-records;;1;No record available;1;Geen rekord beskikbaar nie;0;;0;
+1;filters-translations-categories-alerts;alert-page-danger-message-meaning;;1;This (%page-name%) page configuration(s) is non existent;1;Hierdie (%page-name%) bladsyopstelling(s) bestaan nie;0;;0;
+1;filters-translations-categories-alerts;alert-page-info-translation-meaning;;1;This %page-name% page translation has failed to load, please try again later;1;Hierdie %page-name% bladsy vertaling kon nie laai nie, probeer asseblief later weer;0;;0;
+1;filters-translations-categories-alerts;alert-page-warning-message-meaning;;1;This (%page-name%) page configuration(s) is not available, please try again later;1;Hierdie (%page-name%) bladsyopstelling(s) is nie beskikbaar nie, probeer asseblief later weer;0;;0;
+1;filters-translations-categories-alerts;alert-security-sidebar-warning-meaning;;1;This sidebar (security-section) has been disabled, till further notice;1;Hierdie kantbalk (sekuriteitsafdeling) is tot verdere kennisgewing gedeaktiveer;0;;0;
+1;filters-translations-categories-alerts;alert-success;;1;SUCCESS;1;SUKSES;0;;0;
+1;filters-translations-categories-alerts;alert-success-admin-edit-meaning;;1;has been successfully updated;1;is sukkesvol gewysig;0;;0;
+1;filters-translations-categories-alerts;alert-success-admin-new-meaning;;1;has been successfully added;1;is sukkesvol bygevoeg;0;;0;
+1;filters-translations-categories-alerts;alert-success-admin-remove-meaning;;1;has been successfully removed;1;is sukkesvol verwyder;0;;0;
+1;filters-translations-categories-alerts;alert-success-edit-meaning;;1;has been successfully updated;1;is sukkesvol gewysig;0;;0;
+1;filters-translations-categories-alerts;alert-success-message-sent-meaning;;1;Your message has been successfully sent;1;Jou boodskap is suksesvol gestuur;0;;0;
+1;filters-translations-categories-alerts;alert-success-new-meaning;;1;has been successfully added;1;is sukkesvol bygevoeg;0;;0;
+1;filters-translations-categories-alerts;alert-success-remove-meaning;;1;has been successfully removed;1;is sukkesvol verwyder;0;;0;
+1;filters-translations-categories-alerts;alert-success-file-export-meaning;;1;has been successfully exported;1;is sukkesvol uitgevoer;0;;0;
+1;filters-translations-categories-alerts;alert-success-file-import-meaning;;1;has been successfully imported;1;is sukkesvol ingevoer;0;;0;
+1;filters-translations-categories-alerts;alert-warning;;1;WARNING;1;WAARSKUWING;0;;0;
+1;filters-translations-categories-alerts;alert-form-error;;1;Form Errors;1;Vormfoute;0;;0;

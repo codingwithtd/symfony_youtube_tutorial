@@ -1,0 +1,7 @@
+is_act;filters_categories;translation_key;value;pri_trans;primary_translation;sec_trans;secondary_translation;pri_desc;primary_description;sec_desc;secondary_description
+1;filters-translations-categories-sections;section-about;;1;About Us;1;Wie is ons;0;;0;
+1;filters-translations-categories-sections;section-home;;1;Coding with TD;1;Coding with TD;0;;0;
+1;filters-translations-categories-sections;section-admin;;1;Admin Cpanel;1;Admin Cpanel;0;;0;
+1;filters-translations-categories-sections;section-dashboard;;1;Admin Cpanel;1;Admin Cpanel;0;;0;
+1;filters-translations-categories-sections;section-main-translation;;1;Translations Management;1;Vertalingsbestuur;0;;0;
+1;filters-translations-categories-sections;section-main-filter-translation;;1;Translation Filters;1;Vertalingsfilters;0;;0;

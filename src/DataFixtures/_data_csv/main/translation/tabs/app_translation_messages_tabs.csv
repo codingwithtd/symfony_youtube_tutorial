@@ -1,0 +1,6 @@
+is_act;filters_categories;translation_key;value;pri_trans;primary_translation;sec_trans;secondary_translation;pri_desc;primary_description;sec_desc;secondary_description
+1;filters-translations-categories-tabs;tabs-approved;;1;Approvals;1;Goedkeurings;0;;0;
+1;filters-translations-categories-tabs;tabs-translation;;1;Translations;1;Vertalings;0;;0;
+1;filters-translations-categories-tabs;tabs-activation;;1;Activation;1;Aktivering;0;;0;
+1;filters-translations-categories-tabs;tabs-particulars;;1;Particulars;1;Besonderhede;0;;0;
+1;filters-translations-categories-tabs;tabs-custom;;1;Custom;1;Pasgemaak;0;;0;

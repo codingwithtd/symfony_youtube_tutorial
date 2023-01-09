@@ -1,0 +1,23 @@
+is_act;filters_categories;translation_key;value;pri_trans;primary_translation;sec_trans;secondary_translation;pri_desc;primary_description;sec_desc;secondary_description
+1;filters-translations-categories-buttons;button-allow;;1;Allow;1;Toelaating;0;;0;
+1;filters-translations-categories-buttons;button-back;;1;Back;1;Terug;0;;0;
+1;filters-translations-categories-buttons;button-calculator;;1;Calculate;1;Bereken;0;;0;
+1;filters-translations-categories-buttons;button-cancel;;1;Cancel;1;Kanselleer;0;;0;
+1;filters-translations-categories-buttons;button-close;;1;Close;1;Maak Toe;0;;0;
+1;filters-translations-categories-buttons;button-contact-us;;1;Contact Us;1;Kontak Ons;0;;0;
+1;filters-translations-categories-buttons;button-create-new;;1;Create New;1;Skep Nuwe;0;;0;
+1;filters-translations-categories-buttons;button-delete;;1;Delete;1;Skrap;0;;0;
+1;filters-translations-categories-buttons;button-edit;;1;Edit;1;Wysig;0;;0;
+1;filters-translations-categories-buttons;button-exit;;1;Exit;1;Uitgang;0;;0;
+1;filters-translations-categories-buttons;button-export-translation-yaml;;1;Export Translation YAML File;1;Uitvoer vertlatings YAML lêer;0;;0;
+1;filters-translations-categories-buttons;button-forgot;;1;Forgot Password;1;Verlore Wagwoord;0;;0;
+1;filters-translations-categories-buttons;button-forward;;1;Forward;1;Voorentoe;0;;0;
+1;filters-translations-categories-buttons;button-import-translation-yaml;;1;Import Translation YAML File;1;Invoer vetlatings YAML lêer;0;;0;
+1;filters-translations-categories-buttons;button-refresh;;1;Refresh;1;Verfris;0;;0;
+1;filters-translations-categories-buttons;button-reset;;1;Reset;1;Herstel;0;;0;
+1;filters-translations-categories-buttons;button-save;;1;Save;1;Stoor;0;;0;
+1;filters-translations-categories-buttons;button-send;;1;Send;1;Stuur;0;;0;
+1;filters-translations-categories-buttons;button-sign-in;;1;Sign In;1;Teken In;0;;0;
+1;filters-translations-categories-buttons;button-sign-up;;1;Sign Up;1;Registeer;0;;0;
+1;filters-translations-categories-buttons;button-subscribe;;1;Subscribe;1;Intekenaar;0;;0;
+1;filters-translations-categories-buttons;button-view-list;;1;List %page_title%;1;Lys %page_title%;0;;0;

@@ -1,0 +1,12 @@
+is_act;filters_categories;translation_key;value;pri_trans;primary_translation;sec_trans;secondary_translation;pri_desc;primary_description;sec_desc;secondary_description
+1;filters-translations-categories-links;link-page-home-dashboard;;1;Home;1;Tuis;0;;0;
+1;filters-translations-categories-links;link-page-security-forgot;;1;Forgot Password;1;Verlore Wagwoord;0;;0;
+1;filters-translations-categories-links;link-page-security-signin;;1;Sign In;1;Teken In;0;;0;
+1;filters-translations-categories-links;link-page-security-signup;;1;Sign Up;1;Registreer;0;;0;
+1;filters-translations-categories-links;link-page-security-support;;1;Technical Support;1;Tegniese Onderstuening;0;;0;
+1;filters-translations-categories-links;link-page-main-translation-dashboard;;1;Dashboard;1;Paneelbord;0;;0;
+1;filters-translations-categories-links;link-page-main-translation-messages;;1;Messages  Translations;1;Boodskappe  Vertalings;0;;0;
+1;filters-translations-categories-links;link-page-main-translation-securities;;1;Securities Translations;1;Sekuriteite Vertalings;0;;0;
+1;filters-translations-categories-links;link-page-main-translation-validators;;1;Validators Translations;1;Valideerders Vertalings;0;;0;
+1;filters-translations-categories-links;link-page-main-filter-translation-categories;;1;Category Filters;1;Kategorie Filters;0;;0;
+1;filters-translations-categories-links;link-section-admin;;1;Dashboard;1;Dashboard;0;;0;

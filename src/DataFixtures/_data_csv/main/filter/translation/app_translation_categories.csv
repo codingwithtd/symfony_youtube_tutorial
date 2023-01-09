@@ -1,0 +1,13 @@
+id;is_act;translation_key;value;pri_trans;primary_translation;sec_trans;secondary_translation;pri_desc;primary_description;sec_desc;secondary_description
+67;0;filters-translations-categories-empty;empty;1;Please select translations category;1;Kies asseblief vertalings kategorie;0;;0;
+68;1;filters-translations-categories-apps;apps;1;Application;1;Aplikasie;0;;0;
+69;1;filters-translations-categories-alerts;alerts;1;Alerts;1;Waarskuwings;0;;0;
+70;1;filters-translations-categories-buttons;buttons;1;Buttons;1;Knoppies;0;;0;
+71;1;filters-translations-categories-filters;filters;1;Filters;1;Filtreders;0;;0;
+71;1;filters-translations-categories-helps;help;1;Help;1;Hulp;0;;0;
+72;1;filters-translations-categories-labels;labels;1;Labels;1;Etikette;0;;0;
+73;1;filters-translations-categories-navs;navs;1;Navigation;1;Navigasie;0;;0;
+74;1;filters-translations-categories-tabs;tabs;1;Tabs;1;Oortjies;0;;0;
+75;1;filters-translations-categories-links;links;1;Links;1;Skakels;0;;0;
+76;1;filters-translations-categories-sections;sections;1;Sections;1;Seksies;0;;0;
+77;1;filters-translations-categories-texts;texts;1;Texts;1;Teks;0;;0;
