@@ -1,0 +1,174 @@
+app-text-site-city: 'Cape Town'
+app-text-site-cookie: 'Cookie Statement'
+app-text-site-cookie-meaning: 'This website uses cookies to ensure you get the best experience on our website. See our'
+app-text-site-copyright: Copyright
+app-text-site-country: 'South Africa'
+app-text-site-enter-email-address: 'Enter email address'
+app-text-site-language-location: 'Language | Location'
+app-text-site-locale-af-za: 'South Africa (Afrikaans)'
+app-text-site-locale-en-za: 'South Africa (English)'
+app-text-site-locale-en-uk: 'United Kingdom (English)'
+app-text-site-locale-en-us: 'United States (English)'
+app-text-site-passion: 'Passionate about Symfony PHP web development'
+app-text-site-passion-meaning: 'All PHP web development related functions and much more'
+app-text-site-password-accept: 'Accept password'
+app-text-site-password-accept-meaning: 'Is the Coding with TD not accepting your password?'
+app-text-site-password-example: 'Password message example'
+app-text-site-password-example-meaning: '(e.g. !@sunny!side#UP vs !@SUNNY!SIDE#UP)'
+app-text-site-password-instructions: Instructions
+app-text-site-password-instructions-meaning: 'If you have lost your password, enter your signup email address below so we can ask you your specifi'
+app-text-site-password-message: 'Password message'
+app-text-site-password-message-meaning: 'You have used capital letters where necessary'
+app-text-site-password-message-continue: 'Password message continue'
+app-text-site-password-message-continue-meaning: 'You don`t have CAPS LOCK turned on on your keyboard'
+app-text-site-password-question: 'Lost password'
+app-text-site-password-question-meaning: 'Did you lost your Coding with TD password?'
+app-text-site-password-reminder: 'ALSO NOTE'
+app-text-site-password-reminder-meaning: 'Three (3) incorrect password attempts will lock your account for one (1) hour'
+app-text-site-password-title: 'Password title'
+app-text-site-password-title-meaning: 'CHECK THAT'
+app-text-site-powered-by: 'Powered By'
+app-text-site-powered-by-meaning: 'Web Hero Technologies'
+app-text-site-province: 'Western Cape'
+app-text-site-question-sign-in: 'Sign In Question'
+app-text-site-question-sign-in-meaning: 'Already have an Coding with TD account?'
+app-text-site-question-sign-up: 'Sign Up Question'
+app-text-site-question-sign-up-meaning: 'Don`t have an Coding with TD account?'
+app-text-site-rights-reserved: 'Rights Reserved'
+app-text-site-slogan: 'High performance Symfony PHP made easy'
+app-text-site-slogan-meaning: 'Empowering the aspiring developers to develop technology through collective knowledge.'
+app-text-site-theme: 'Dark Theme'
+app-text-site-theme-meaning: 'Dark Theme turns the light surfaces of the page dark, creating an experience ideal for the night owl'
+app-text-site-theme-switch: 'Dark Switch'
+app-text-site-title: 'Coding with TD'
+app-text-site-version: 'BETA v1.05.01'
+app-text-site-welcome: 'Welcome by'
+button-allow: Allow
+button-back: Back
+button-calculator: Calculate
+button-cancel: Cancel
+button-close: Close
+button-contact-us: 'Contact Us'
+button-create-new: 'Create New'
+button-delete: Delete
+button-edit: Edit
+button-exit: Exit
+button-export-translation-yaml: 'Export Translation YAML File'
+button-forgot: 'Forgot Password'
+button-forward: Forward
+button-import-translation-yaml: 'Import Translation YAML File'
+button-refresh: Refresh
+button-reset: Reset
+button-save: Save
+button-send: Send
+button-sign-in: 'Sign In'
+button-sign-up: 'Sign Up'
+button-subscribe: Subscribe
+button-view-list: 'List %page_title%'
+filters-placeholder-please-select: 'Please select option'
+label-translation-custom-key: 'Custom Translation Key'
+help-translation-custom-key: '# Please type the filter key value here'
+label-translation-key: 'Translation Key'
+help-translation-key: '# Auto generated translation key identification'
+label-translation-value: 'Translation Value'
+help-translation-value: '# Please type the translation value here'
+label-translation-description: 'Translation Description'
+help-translation-description: '# Please enter the translation description here'
+label-translation-locale-choice: 'Translation Locale'
+help-translation-locale-choice: '# Please select the translation locale here'
+label-translation-category-choice: 'Translation Category'
+help-translation-category-choice: '# Please select the translation category here'
+label-translation-toggle-custom-key: 'Custom Key'
+help-translation-toggle-custom-key: '# Toggle generate custom key [Yes or No]'
+label-toggle-active: Active
+help-toggle-active: '# Toggle active [Yes or No]'
+label-translation: Translation
+help-translation: '# Please type the translation here'
+link-page-home-dashboard: Home
+link-page-security-forgot: 'Forgot Password'
+link-page-security-signin: 'Sign In'
+link-page-security-signup: 'Sign Up'
+link-page-security-support: 'Technical Support'
+link-page-main-translation-dashboard: Dashboard
+link-page-main-translation-messages: 'Messages  Translations'
+link-page-main-translation-securities: 'Securities Translations'
+link-page-main-translation-validators: 'Validators Translations'
+link-page-main-filter-translation-categories: 'Category Filters'
+nav-link-follow-us-facebook: 'Follow us on Facebook'
+nav-link-follow-us-instagram: 'Follow us on Instagram'
+nav-link-follow-us-linked-in: 'Follow us on LinkedIn'
+nav-link-follow-us-twitter: 'Follow us on Twitter'
+nav-link-security-forgot: 'Forgot Password'
+nav-link-security-signin: 'Sign In'
+nav-link-security-signup: 'Sign Up'
+nav-link-security-support: 'Technical Support'
+nav-link-sign-off: 'Sign Off'
+nav-link-site-about: 'About Us'
+nav-link-site-disclaimer: 'Website Disclaimer'
+nav-link-site-home: Home
+nav-link-site-privacy: 'Privacy Statement'
+nav-link-site-security: Security
+nav-link-site-services: Services
+nav-link-site-terms: 'Terms and Conditions'
+nav-link-site-cheatsheet: Cheatsheet
+section-about: 'About Us'
+section-home: 'Coding with TD'
+section-admin: 'Admin Cpanel'
+section-dashboard: 'Admin Cpanel'
+section-main-translation: 'Translations Management'
+section-main-filter-translation: 'Translation Filters'
+tabs-approved: Approvals
+tabs-translation: Translations
+tabs-activation: Activation
+text-actions: Actions
+text-active: Active
+text-approval-particulars: 'Approval Particulars'
+text-behavior: Behavior
+text-created: Created
+text-create-new: 'Create New'
+text-day: Day
+text-deactivated: Deactivated
+text-delete: Delete
+text-description: Description
+text-documentation: Documentation
+text-edit: Edit
+text-view: View
+text-inactive: Inactive
+text-link-user-profile: 'Link User Profile'
+text-list: List
+text-translation-custom-key: 'Custom Key'
+text-translation-auto-key: 'Auto Generated Key'
+text-unknown: Unknown
+text-updated: Updated
+text-updated-at: 'Updated at'
+text-updated-by: 'Updated by'
+text-brand-xampp: 'XAMPP is the most popular PHP development environment'
+text-brand-mysql: "MySQL - The world's most popular open source database"
+text-brand-phpmyadmin: 'phpMyAdmin - Bringing MySQL to the web'
+text-brand-symfony: 'Symfony - High Performance PHP Framework for Web Development'
+text-brand-php: 'PHP - Hypertext Preprocessor'
+text-brand-bootstrap: 'Bootstrap - The most popular HTML, CSS, and JS library in the world'
+alert-admin-sidebar-warning-meaning: 'This sidebar (admin-section) has been disabled, till further notice'
+alert-client-sidebar-warning-meaning: 'This sidebar (client-section) has been disabled, till further notice'
+alert-danger: DANGER
+alert-empty-records: 'No records specified'
+alert-error: ERROR
+alert-home-sidebar-warning-meaning: 'This sidebar (home-section) has been disabled, till further notice'
+alert-info: INFO
+alert-no-records: 'No record available'
+alert-page-danger-message-meaning: 'This (%page-name%) page configuration(s) is non existent'
+alert-page-info-translation-meaning: 'This %page-name% page translation has failed to load, please try again later'
+alert-page-warning-message-meaning: 'This (%page-name%) page configuration(s) is not available, please try again later'
+alert-security-sidebar-warning-meaning: 'This sidebar (security-section) has been disabled, till further notice'
+alert-success: SUCCESS
+alert-success-admin-edit-meaning: 'has been successfully updated'
+alert-success-admin-new-meaning: 'has been successfully added'
+alert-success-admin-remove-meaning: 'has been successfully removed'
+alert-success-edit-meaning: 'has been successfully updated'
+alert-success-message-sent-meaning: 'Your message has been successfully sent'
+alert-success-new-meaning: 'has been successfully added'
+alert-success-remove-meaning: 'has been successfully removed'
+alert-success-file-export-meaning: 'has been successfully exported'
+alert-success-file-import-meaning: 'has been successfully imported'
+alert-warning: WARNING
+alert-form-error: 'Form Errors'

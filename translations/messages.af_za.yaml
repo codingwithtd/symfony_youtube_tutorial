@@ -1,0 +1,173 @@
+app-text-site-city: Kaapstad
+app-text-site-cookie: 'Koekie verklaring'
+app-text-site-cookie-meaning: 'Hierdie webwerf gebruik koekies om te verseker dat jy die beste ervaring op ons webwerf kry. Sien on'
+app-text-site-copyright: Kopiereg
+app-text-site-country: 'Suid Afrika'
+app-text-site-enter-email-address: 'Voer e-posadres in'
+app-text-site-language-location: 'Taal | Ligging'
+app-text-site-locale-af-za: 'Suid Afrika (Afrikaans)'
+app-text-site-locale-en-za: 'Suid Afrika (Engels)'
+app-text-site-locale-en-uk: 'Verenigde Koninkryk (Engels)'
+app-text-site-locale-en-us: 'Verenigde State (Engels)'
+app-text-site-passion: 'Passievol oor Symfony PHP-webontwikkeling'
+app-text-site-passion-meaning: 'Alle PHP-webontwikkelingverwante funksies en nog baie meer'
+app-text-site-password-accept: 'Aanvaar wagwoord'
+app-text-site-password-accept-meaning: 'Aanvaar die Coding with TD nie jou wagwoord nie?'
+app-text-site-password-example: 'Wagwoodbooskap voorbeeld'
+app-text-site-password-example-meaning: '(bv. !@sunny!side#UP vs !@SUNNY!SIDE#UP)'
+app-text-site-password-instructions: Instruksies
+app-text-site-password-instructions-meaning: 'As jy jou wagwoord verloor het, voer jou aanmeld-e-posadres hieronder in sodat ons jou gespesifiseer'
+app-text-site-password-message: Wagwoodbooskap
+app-text-site-password-message-meaning: 'Jy het hoofletters gebruik waar nodig'
+app-text-site-password-message-continue: 'Wagwoordboodskap gaan voort'
+app-text-site-password-message-continue-meaning: 'Jy het nie CAPS LOCK aangeskakel op jou sleutelbord nie'
+app-text-site-password-question: 'Velore wagwoord'
+app-text-site-password-question-meaning: 'Het jy jou Coding with TD-wagwoord verloor?'
+app-text-site-password-reminder: 'LET OP'
+app-text-site-password-reminder-meaning: 'Drie (3) verkeerde wagwoordpogings sal jou rekening vir een (1) uur sluit'
+app-text-site-password-title: 'Wagwoord titel'
+app-text-site-password-title-meaning: 'MAAK SEKER'
+app-text-site-powered-by: 'Aangedryf deur'
+app-text-site-powered-by-meaning: 'Web Hero Technologies'
+app-text-site-province: 'Wes Kaap'
+app-text-site-question-sign-in: 'Teken In Vraag'
+app-text-site-question-sign-in-meaning: 'Het reeds `n Coding with TD-rekening?'
+app-text-site-question-sign-up: 'Registreer Vraag'
+app-text-site-question-sign-up-meaning: 'Het nie `n Coding with TD-rekening nie?'
+app-text-site-rights-reserved: 'Regte voorbehou'
+app-text-site-slogan: 'Hoë werkverrigting Symfony PHP maklik gemaak'
+app-text-site-slogan-meaning: 'Bemagtig die aspirant-ontwikkelaars om tegnologie te ontwikkel deur kollektiewe kennis'
+app-text-site-theme: 'Donker Tema'
+app-text-site-theme-meaning: 'Donker Tema maak die ligte oppervlaktes van die bladsy donker, wat `n ervaring skep wat ideaal is vi'
+app-text-site-theme-switch: 'Donker Skakelaar'
+app-text-site-title: 'Coding with TD'
+app-text-site-version: 'BETA v1.05.01'
+app-text-site-welcome: 'Welkom by'
+button-allow: Toelaating
+button-back: Terug
+button-calculator: Bereken
+button-cancel: Kanselleer
+button-close: 'Maak Toe'
+button-contact-us: 'Kontak Ons'
+button-create-new: 'Skep Nuwe'
+button-delete: Skrap
+button-edit: Wysig
+button-exit: Uitgang
+button-export-translation-yaml: 'Uitvoer vertlatings YAML lêer'
+button-forgot: 'Verlore Wagwoord'
+button-forward: Voorentoe
+button-import-translation-yaml: 'Invoer vetlatings YAML lêer'
+button-refresh: Verfris
+button-reset: Herstel
+button-save: Stoor
+button-send: Stuur
+button-sign-in: 'Teken In'
+button-sign-up: Registeer
+button-subscribe: Intekenaar
+button-view-list: 'Lys %page_title%'
+filters-placeholder-please-select: 'Kies assebleif opsie'
+label-translation-custom-key: 'Gepasmaakte vertaalsleutel'
+help-translation-custom-key: '# Tik asseblief die gepasmaakte vertaalsleutel hier in'
+label-translation-key: 'Vertaling Sluetel'
+help-translation-key: '# Outo-gegenereerde vertaling sleutel identifikasie'
+label-translation-value: Vertalingwaarde
+help-translation-value: '# Tik asseblief die vertaling waarde hier in'
+label-translation-description: 'Vertaling beskrywing'
+help-translation-description: '# Voer asseblief die vertaling beskrywing hier in'
+label-translation-locale-choice: 'Vertaling Lokaal'
+help-translation-locale-choice: '# Kies assebleif die vertaling lokaal hier'
+label-translation-category-choice: 'Vertaling Kategorie'
+help-translation-category-choice: '# Kies assebleif die vertaling kategorie hier'
+label-translation-toggle-custom-key: 'Pasgemaakte sleutel'
+help-translation-toggle-custom-key: '# Wissel genereer persoonlike sluetel [Ja of Nee]'
+label-toggle-active: Aktief
+help-toggle-active: '# Wissel aktief [Ja of Nee]'
+label-translation: Vertaling
+help-translation: '# Tik assebleif die vertaling hier in'
+link-page-home-dashboard: Tuis
+link-page-security-forgot: 'Verlore Wagwoord'
+link-page-security-signin: 'Teken In'
+link-page-security-signup: Registreer
+link-page-security-support: 'Tegniese Onderstuening'
+link-page-main-translation-dashboard: Paneelbord
+link-page-main-translation-messages: 'Boodskappe  Vertalings'
+link-page-main-translation-securities: 'Sekuriteite Vertalings'
+link-page-main-translation-validators: 'Valideerders Vertalings'
+link-page-main-filter-translation-categories: 'Kategorie Filters'
+nav-link-follow-us-facebook: 'Volg ons op Facebook'
+nav-link-follow-us-instagram: 'Volg ons op Instagram'
+nav-link-follow-us-linked-in: 'Volg ons op LinkedIn'
+nav-link-follow-us-twitter: 'Volg ons op Twitter'
+nav-link-security-forgot: 'Verlore Wagwoord'
+nav-link-security-signin: 'Teken In'
+nav-link-security-signup: Registreer
+nav-link-security-support: 'Tegniese Onderstuening'
+nav-link-sign-off: 'Teken Af'
+nav-link-site-about: 'Wie is ons'
+nav-link-site-disclaimer: 'Webwerf Vrywaring'
+nav-link-site-home: Tuis
+nav-link-site-privacy: 'Privaatheid verklaring'
+nav-link-site-security: Sekuriteit
+nav-link-site-services: Dienste
+nav-link-site-terms: 'Bepalings en voorwaardes'
+nav-link-site-cheatsheet: Kroekbladsy
+section-about: 'Wie is ons'
+section-home: 'Coding with TD'
+link-section-admin: 'Admin Cpanel'
+section-main-translation: Vertalingsbestuur
+section-main-filter-translation: Vertalingsfilters
+tabs-approved: Goedkeurings
+tabs-translation: Vertalings
+tabs-activation: Aktivering
+text-actions: Aksies
+text-active: Aktief
+text-approval-particulars: 'Goedkeuring Besonderhede'
+text-behavior: Gedrag
+text-created: Geskep
+text-create-new: 'Skep Nuwe'
+text-day: Dag
+text-deactivated: Gedeaktiveer
+text-delete: Skrap
+text-description: Beskrywing
+text-documentation: Documentation
+text-edit: Wysig
+text-view: Besigtig
+text-inactive: Onaktief
+text-link-user-profile: 'Koppel gebruikerprofiel'
+text-list: Lys
+text-translation-custom-key: 'Pasgemaakte sleutel'
+text-translation-auto-key: 'Outo-gegenereerde sleutel'
+text-unknown: Onbekend
+text-updated: Opgedateer
+text-updated-at: 'Opgedateer op'
+text-updated-by: 'Opgedateer duer'
+text-brand-xampp: 'XAMPP is the most popular PHP development environment'
+text-brand-mysql: "MySQL - The world's most popular open source database"
+text-brand-phpmyadmin: 'phpMyAdmin - Bringing MySQL to the web'
+text-brand-symfony: 'Symfony - High Performance PHP Framework for Web Development'
+text-brand-php: 'PHP - Hypertext Preprocessor'
+text-brand-bootstrap: 'Bootstrap - The most popular HTML, CSS, and JS library in the world'
+alert-admin-sidebar-warning-meaning: 'Hierdie kantbalk (adminafdeling) is tot verdere kennisgewing gedeaktiveer'
+alert-client-sidebar-warning-meaning: 'Hierdie kantbalk (kli�ntafdeling) is tot verdere kennisgewing gedeaktiveer'
+alert-danger: GEVAAR
+alert-empty-records: 'Geen rekords gespesifiseer nie'
+alert-error: FOUT
+alert-home-sidebar-warning-meaning: 'Hierdie kantbalk (tuis-afdeling) is tot verdere kennisgewing gedeaktiveer'
+alert-info: INLIGTING
+alert-no-records: 'Geen rekord beskikbaar nie'
+alert-page-danger-message-meaning: 'Hierdie (%page-name%) bladsyopstelling(s) bestaan nie'
+alert-page-info-translation-meaning: 'Hierdie %page-name% bladsy vertaling kon nie laai nie, probeer asseblief later weer'
+alert-page-warning-message-meaning: 'Hierdie (%page-name%) bladsyopstelling(s) is nie beskikbaar nie, probeer asseblief later weer'
+alert-security-sidebar-warning-meaning: 'Hierdie kantbalk (sekuriteitsafdeling) is tot verdere kennisgewing gedeaktiveer'
+alert-success: SUKSES
+alert-success-admin-edit-meaning: 'is sukkesvol gewysig'
+alert-success-admin-new-meaning: 'is sukkesvol bygevoeg'
+alert-success-admin-remove-meaning: 'is sukkesvol verwyder'
+alert-success-edit-meaning: 'is sukkesvol gewysig'
+alert-success-message-sent-meaning: 'Jou boodskap is suksesvol gestuur'
+alert-success-new-meaning: 'is sukkesvol bygevoeg'
+alert-success-remove-meaning: 'is sukkesvol verwyder'
+alert-success-file-export-meaning: 'is sukkesvol uitgevoer'
+alert-success-file-import-meaning: 'is sukkesvol ingevoer'
+alert-warning: WAARSKUWING
+alert-form-error: Vormfoute
