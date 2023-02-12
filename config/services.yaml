@@ -29,9 +29,10 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+    Symfony\Bridge\Doctrine\Security\RememberMe\DoctrineTokenProvider: ~
 
     main_filter_translation_filtrate_categories:
-        class: App\Events\Listeners\Main\Filter\Filtrate\MainFilterTranslationFiltrateCategoriesListener
+        class: App\Events\Listeners\Main\Filter\Translation\Filtrate\MainFilterTranslationFiltrateCategoriesListener
         arguments: [ "@doctrine.orm.entity_manager" ]
         tags:
             - name: kernel.event_listener
@@ -40,6 +41,30 @@ services:
 
     main_translation_filtrate_messages:
         class: App\Events\Listeners\Main\Translation\Filtrate\MainTranslationFiltrateMessagesListener
+        arguments: [ "@doctrine.orm.entity_manager" ]
+        tags:
+            - name: kernel.event_listener
+              event: kernel.request
+              method: onKernelRequest
+
+    main_filter_user_filtrate_hint:
+        class: App\Events\Listeners\Main\Filter\User\Filtrate\MainFilterUserHintListener
+        arguments: [ "@doctrine.orm.entity_manager" ]
+        tags:
+            - name: kernel.event_listener
+              event: kernel.request
+              method: onKernelRequest
+
+    main_filter_user_filtrate_module:
+        class: App\Events\Listeners\Main\Filter\User\Filtrate\MainFilterUserModuleListener
+        arguments: [ "@doctrine.orm.entity_manager" ]
+        tags:
+            - name: kernel.event_listener
+              event: kernel.request
+              method: onKernelRequest
+
+    main_filter_user_filtrate_role:
+        class: App\Events\Listeners\Main\Filter\User\Filtrate\MainFilterUserRoleListener
         arguments: [ "@doctrine.orm.entity_manager" ]
         tags:
             - name: kernel.event_listener
