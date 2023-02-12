@@ -13,4 +13,6 @@
 <p>"The end result we reaching for is so that the client or administrator of the application can change any translation them selves, e.g. spelling mistakes, change grammar, add languages to the application or change the button wording from Sign In to Login and back a gain, eish, instead of bugging me for these changes."</p>
 <p>https://www.youtube.com/watch?v=-tYR8lzycoY&list=PLcrzW81Ug8rcVscyNGYTKQ0L10ykroT5b&ab_channel=CodingwithTD</p>
 <h3>4. Symfony Security</h3>
-<p>Next up will be Symfony Security</p>
+<p>We continue with Symfony Security, and offshoot of Symfony Translation series.</p>
+<p>The end result we reaching for is so that the client or administrator of the application can administrate all user related data, whereby the user can edit only their own data.</P>
+<p>https://www.youtube.com/watch?v=cNpufU5cz5k&list=PLcrzW81Ug8rfuyktEe8cjbQ975TaAalEx&index=2&ab_channel=CodingwithTD</p>
