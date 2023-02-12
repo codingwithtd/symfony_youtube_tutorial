@@ -7,12 +7,14 @@ use App\Events\Injectors\ParamsInjector;
 use App\Form\Main\Translation\MainTranslationValidatorsType;
 use App\Repository\Main\Translation\MainTranslationValidatorsRepository;
 use App\Utilities\Slugger;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 #[Route('/main/translation/validators')]
+#[IsGranted('ROLE_ADMIN_USER')]
 class MainTranslationValidatorsController extends AbstractController
 {
     private ParamsInjector $pageInjector;

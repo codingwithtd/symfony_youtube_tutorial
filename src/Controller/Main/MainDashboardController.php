@@ -3,10 +3,13 @@
 namespace App\Controller\Main;
 
 use App\Events\Injectors\ParamsInjector;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+#[Route('/main')]
+#[IsGranted('ROLE_ADMIN_USER')]
 class MainDashboardController extends AbstractController
 {
     private ParamsInjector $pageInjector;
@@ -16,7 +19,7 @@ class MainDashboardController extends AbstractController
         $this->pageInjector = $injector;
     }
 
-    #[Route(['en_za'=>'/main', 'af_za'=>'/main'], name: 'app_main_dashboard_index')]
+    #[Route('/', name: 'app_main_dashboard_index')]
     public function index(): Response
     {
         return $this->render('home/index.html.twig', [

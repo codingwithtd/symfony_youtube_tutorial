@@ -9,12 +9,14 @@ use App\Form\Main\Translation\MainTranslationMessagesType;
 use App\Repository\Main\Translation\MainTranslationMessagesRepository;
 use App\Utilities\Slugger;
 use Doctrine\ORM\Exception\ORMException;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 #[Route('/main/translation/messages')]
+#[IsGranted('ROLE_ADMIN_USER')]
 class MainTranslationMessagesController extends AbstractController
 {
     private ParamsInjector $pageInjector;
@@ -30,7 +32,7 @@ class MainTranslationMessagesController extends AbstractController
         $page_content = '1';
 
         if($mainTranslationMessagesRepository->findAll())
-            $page_content = $mainTranslationMessagesRepository->findAll();
+            $page_content = $mainTranslationMessagesRepository->findBy(['mainFilterTranslationCategories' => '326']);
 
         return $this->render('main/index.html.twig', [
             'page_params' => $this->pageInjector->params(),

@@ -7,12 +7,14 @@ use App\Events\Injectors\ParamsInjector;
 use App\Form\Main\Filter\Translation\MainFilterTranslationCategoriesType;
 use App\Repository\Main\Filter\Translation\MainFilterTranslationCategoriesRepository;
 use App\Utilities\Slugger;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 #[Route('/main/filter/translation/categories')]
+#[IsGranted('ROLE_ADMIN_USER')]
 class MainFilterTranslationCategoriesController extends AbstractController
 {
     private ParamsInjector $pageInjector;
@@ -49,7 +51,7 @@ class MainFilterTranslationCategoriesController extends AbstractController
             if ($form['formApprovals']['isApproved']->getData()){
                 $mainFilterTranslationCategory->setIsApproved(true);
                 $mainFilterTranslationCategory->setApprovedAt(new \DateTime('now'));
-                $mainFilterTranslationCategory->setApprovedBy('WebAdmin');//$this->getUser());
+                $mainFilterTranslationCategory->setApprovedBy($this->getUser());
             }
 
             $mainFilterTranslationCategory->setCreatedBy($this->getUser());
@@ -121,6 +123,7 @@ class MainFilterTranslationCategoriesController extends AbstractController
     }
 
     #[Route('/{id}/delete', name: 'app_main_filter_translation_categories_delete', methods: ['POST'])]
+    #[IsGranted('ROLE_SUPER_ADMIN')]
     public function delete(Request $request, MainFilterTranslationCategories $mainFilterTranslationCategory, MainFilterTranslationCategoriesRepository $mainFilterTranslationCategoriesRepository): Response
     {
         if ($this->isCsrfTokenValid('delete'.$mainFilterTranslationCategory->getId(), $request->request->get('_token'))) {
