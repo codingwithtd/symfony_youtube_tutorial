@@ -18,6 +18,9 @@ doctrine:
 
         filters:
             main_filter_translation_filtrate_categories: App\Events\SQLFilters\Main\Filter\Translation\Filtrate\MainFilterTranslationFiltrateCategoriesSQLFilter
+            main_filter_user_filtrate_hint: App\Events\SQLFilters\Main\Filter\User\Filtrate\MainFilterUserHintSQLFilter
+            main_filter_user_filtrate_module: App\Events\SQLFilters\Main\Filter\User\Filtrate\MainFilterUserModuleSQLFilter
+            main_filter_user_filtrate_role: App\Events\SQLFilters\Main\Filter\User\Filtrate\MainFilterUserRoleSQLFilter
             main_translation_filtrate_messages: App\Events\SQLFilters\Main\Translation\Filtrate\MainTranslationFiltrateMessagesSQLFilter
             main_translation_filtrate_securities: App\Events\SQLFilters\Main\Translation\Filtrate\MainTranslationFiltrateSecuritiesSQLFilter
             main_translation_filtrate_validators: App\Events\SQLFilters\Main\Translation\Filtrate\MainTranslationFiltrateValidatorsSQLFilter
