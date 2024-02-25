@@ -16,3 +16,14 @@
 <p>We continue with Symfony Security, and offshoot of Symfony Translation series.</p>
 <p>The end result we reaching for is so that the client or administrator of the application can administrate all user related data, whereby the user can edit only their own data.</P>
 <p>https://www.youtube.com/watch?v=cNpufU5cz5k&list=PLcrzW81Ug8rfuyktEe8cjbQ975TaAalEx&index=2&ab_channel=CodingwithTD</p>
+<hr />
+<h3>Donations</h3>
+<p>🙏 Want to support Coding with TD? Your contributions make a big difference! You're welcome 
+to donate by clicking on the BuyMeACoffee or PayPal link below. Your support helps us 
+create more educational content and spread the joy of coding. Thank you for being a part of our
+journey! 🚀</p>
+
+<p>https://buymeacoffee.com/CodingWithTD</p>
+
+<p>https://paypal.me/CodingWithTD</p>
+<hr />
